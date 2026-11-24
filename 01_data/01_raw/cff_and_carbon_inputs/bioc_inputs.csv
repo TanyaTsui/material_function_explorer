@@ -80,21 +80,21 @@ baseline_toughened_glass,dolomite,0.151,Non-biogenic,,"baseline LCI protocol, of
 baseline_toughened_glass,chalk (limestone),0.047,Non-biogenic,,"baseline LCI protocol, official run (batch_5)",,
 baseline_toughened_glass,cullet,0.035,Non-biogenic,,"baseline LCI protocol, official run (batch_5)",,
 baseline_toughened_glass,sulphate,0.009,Non-biogenic,,"baseline LCI protocol, official run (batch_5)",,
-raw_biopol_prototype,sawdust (dry mass),0.3812,Wood,0,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",,"filler; 2/3 of the milled filler (LCI milling block); dry mass, so moisture 0"
-raw_biopol_prototype,seagrass (dry mass),0.1906,Cellulose fibres and stalks,0,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",closest archetype,filler; 1/3 of the milled filler; seagrass is not in the archetype list
-raw_biopol_prototype,pea protein isolate,0.339,Cellulose fibres and stalks,0,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",closest archetype,"binder; protein has ~0.5 kg C/kg, so 0.44 is on the low side (conservative for RAW)"
-raw_biopol_prototype,glycerol,0.0862,Non-biogenic,0,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",conservative,"plasticiser; ecoinvent glycerine is a biodiesel co-product, so partly biogenic carbon, left out (conservative for RAW)"
-raw_biopol_prototype,xanthan gum,0.003,Non-biogenic,0,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",conservative,small; left out
-raw_biopol_scaled_up,sawdust (dry mass),0.3812,Wood,0,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",,"filler; 2/3 of the milled filler (LCI milling block); dry mass, so moisture 0"
-raw_biopol_scaled_up,seagrass (dry mass),0.1906,Cellulose fibres and stalks,0,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",closest archetype,filler; 1/3 of the milled filler; seagrass is not in the archetype list
-raw_biopol_scaled_up,pea protein isolate,0.339,Cellulose fibres and stalks,0,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",closest archetype,"binder; protein has ~0.5 kg C/kg, so 0.44 is on the low side (conservative for RAW)"
-raw_biopol_scaled_up,glycerol,0.0862,Non-biogenic,0,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",conservative,"plasticiser; ecoinvent glycerine is a biodiesel co-product, so partly biogenic carbon, left out (conservative for RAW)"
-raw_biopol_scaled_up,xanthan gum,0.003,Non-biogenic,0,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",conservative,small; left out
-raw_cfw_prototype,flax fibre,0.4,Cellulose fibres and stalks,,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",,LCI impregnation block: 40 % flax
+raw_biopol_prototype,sawdust (dry mass),0.3812,Wood,0,"written by hand from the RAW LCI (Claude, 24 Nov 2026); checked by Tanya",,"filler; 2/3 of the milled filler (LCI milling block); dry mass, so moisture 0"
+raw_biopol_prototype,seagrass (dry mass),0.1906,Cellulose fibres and stalks,0,"written by hand from the RAW LCI (Claude, 24 Nov 2026); checked by Tanya",closest archetype,filler; 1/3 of the milled filler; seagrass is not in the archetype list
+raw_biopol_prototype,pea protein isolate,0.339,Cellulose fibres and stalks,0,"written by hand from the RAW LCI (Claude, 24 Nov 2026); checked by Tanya",closest archetype,"binder; protein has ~0.5 kg C/kg, so 0.44 is on the low side (conservative for RAW)"
+raw_biopol_prototype,glycerol,0.0862,Non-biogenic,0,"written by hand from the RAW LCI (Claude, 24 Nov 2026); checked by Tanya",conservative,"plasticiser; ecoinvent glycerine is a biodiesel co-product, so partly biogenic carbon, left out (conservative for RAW)"
+raw_biopol_prototype,xanthan gum,0.003,Non-biogenic,0,"written by hand from the RAW LCI (Claude, 24 Nov 2026); checked by Tanya",conservative,small; left out
+raw_biopol_scaled_up,sawdust (dry mass),0.3812,Wood,0,"written by hand from the RAW LCI (Claude, 24 Nov 2026); checked by Tanya",,"filler; 2/3 of the milled filler (LCI milling block); dry mass, so moisture 0"
+raw_biopol_scaled_up,seagrass (dry mass),0.1906,Cellulose fibres and stalks,0,"written by hand from the RAW LCI (Claude, 24 Nov 2026); checked by Tanya",closest archetype,filler; 1/3 of the milled filler; seagrass is not in the archetype list
+raw_biopol_scaled_up,pea protein isolate,0.339,Cellulose fibres and stalks,0,"written by hand from the RAW LCI (Claude, 24 Nov 2026); checked by Tanya",closest archetype,"binder; protein has ~0.5 kg C/kg, so 0.44 is on the low side (conservative for RAW)"
+raw_biopol_scaled_up,glycerol,0.0862,Non-biogenic,0,"written by hand from the RAW LCI (Claude, 24 Nov 2026); checked by Tanya",conservative,"plasticiser; ecoinvent glycerine is a biodiesel co-product, so partly biogenic carbon, left out (conservative for RAW)"
+raw_biopol_scaled_up,xanthan gum,0.003,Non-biogenic,0,"written by hand from the RAW LCI (Claude, 24 Nov 2026); checked by Tanya",conservative,small; left out
+raw_cfw_prototype,flax fibre,0.4,Cellulose fibres and stalks,,"written by hand from the RAW LCI (Claude, 24 Nov 2026); checked by Tanya",,LCI impregnation block: 40 % flax
 raw_cfw_prototype,epoxy resin,0.6,Non-biogenic,,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",,LCI impregnation block: 60 % epoxy
-raw_cfw_scaled_up,flax fibre,0.4,Cellulose fibres and stalks,,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",,LCI impregnation block: 40 % flax
-raw_cfw_scaled_up,epoxy resin,0.6,Non-biogenic,,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",,LCI impregnation block: 60 % epoxy
-raw_knit_prototype,hemp fibre,1.0,Cellulose fibres and stalks,,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",,"LCI: 1.18 kg fibre in, 1 kg out"
+raw_cfw_scaled_up,flax fibre,0.4,Cellulose fibres and stalks,,"written by hand from the RAW LCI (Claude, 24 Nov 2026); checked by Tanya",,LCI impregnation block: 40 % flax
+raw_cfw_scaled_up,epoxy resin,0.6,Non-biogenic,,"written by hand from the RAW LCI (Claude, 24 Nov 2026); checked by Tanya",,LCI impregnation block: 60 % epoxy
+raw_knit_prototype,hemp fibre,1.0,Cellulose fibres and stalks,,"written by hand from the RAW LCI (Claude, 24 Nov 2026); checked by Tanya",,"LCI: 1.18 kg fibre in, 1 kg out"
 raw_knit_scaled_up,hemp fibre,1.0,Cellulose fibres and stalks,,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",,"LCI: 1.18 kg fibre in, 1 kg out"
-raw_timber_prototype,"softwood timber, incl. 12 % moisture",1.0,Wood,,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",,"99 % reclaimed, 1 % virgin softwood (LCI)"
+raw_timber_prototype,"softwood timber, incl. 12 % moisture",1.0,Wood,,"written by hand from the RAW LCI (Claude, 24 Nov 2026); checked by Tanya",,"99 % reclaimed, 1 % virgin softwood (LCI)"
 raw_timber_scaled_up,"softwood timber, incl. 12 % moisture",1.0,Wood,,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",,"99 % reclaimed, 1 % virgin softwood (LCI)"
