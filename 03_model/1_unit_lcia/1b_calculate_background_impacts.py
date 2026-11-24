@@ -1,8 +1,9 @@
 """
 Step 1b: calculate the impact of one unit of every ecoinvent dataset the model uses (the only step that needs Brightway).
 
-The model uses two kinds of ecoinvent datasets: the background inputs of the LCI sheets (from step 1a) and the avoided
-products of module D (01_data/01_raw/method_constants/avoided_datasets.csv). For each of them, and for each scenario,
+The model uses two kinds of ecoinvent datasets: the background inputs of the LCI sheets (from step 1a) and the datasets
+of the circular footprint formula: virgin and recycled materials, avoided products and energy
+(01_data/01_raw/method_constants/cff_datasets.csv). For each of them, and for each scenario,
 this script calculates the EF 3.1 impact of one unit (1 kg, 1 kWh, 1 tkm, ...) with Brightway. Steps 1c and 1d then only
 multiply amounts by these numbers, without Brightway.
 
@@ -10,7 +11,7 @@ Needs: the conda environment brightway_env and the Brightway project in settings
 premise 2050 database). Takes a few minutes per scenario.
 
 Input:  01_data/02_processed/unit_lcia_steps/1a_lci_exchanges.csv
-        01_data/01_raw/method_constants/avoided_datasets.csv
+        01_data/01_raw/method_constants/cff_datasets.csv
 Output: 01_data/02_processed/unit_lcia_steps/1b_background_impacts_<scenario>.csv  (one row per dataset, one column per
         impact category)
         01_data/02_processed/unit_lcia_steps/1b_impact_categories.csv  (category names and units)
@@ -55,16 +56,16 @@ for flow_key, factor in bd.Method(climate_change).load():
         print(f"  {flow['name']} {flow.get('categories')}: {factor}")
 
 
-# %% The list of datasets: background inputs of the LCIs + avoided products of module D
+# %% The list of datasets: background inputs of the LCIs + the datasets of the circular footprint formula
 exchanges = pd.read_csv(s.STEPS_FOLDER / "1a_lci_exchanges.csv")
 background = exchanges[exchanges.input_is == "background"]
 from_lcis = background[["input_name", "input_reference_product", "input_location", "input_unit"]]
 from_lcis.columns = ["name", "reference product", "location", "unit"]
 
-avoided = pd.read_csv(s.METHOD_CONSTANTS_FOLDER / "avoided_datasets.csv")
-from_module_d = avoided[["name", "reference product", "location", "unit"]]
+cff_datasets = pd.read_csv(s.METHOD_CONSTANTS_FOLDER / "cff_datasets.csv")
+from_cff = cff_datasets[["name", "reference product", "location", "unit"]]
 
-datasets = pd.concat([from_lcis, from_module_d]).drop_duplicates().reset_index(drop=True)
+datasets = pd.concat([from_lcis, from_cff]).drop_duplicates().reset_index(drop=True)
 print(len(datasets), "different datasets")
 
 
@@ -111,7 +112,7 @@ for scenario, database_name in s.SCENARIOS.items():
 # premise rewrites the database, so a few datasets can be renamed or regionalised. A missing dataset today is an error.
 if (~results["today"].found).any():
     raise ValueError("Some datasets are not in today's database (see the list above). Fix the LCI sheet or "
-                     "avoided_datasets.csv, then run again.")
+                     "cff_datasets.csv, then run again.")
 for scenario in s.SCENARIOS:
     table = results[scenario]
     table["note"] = ""

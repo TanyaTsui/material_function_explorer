@@ -20,4 +20,11 @@ C3–C4, per kg of product. The file name is the case id used everywhere in the 
 - The original workbooks are in `archive/`, with `baseline_straw_bale` and `baseline_soft_wood_fibre_board` (dropped
   from the material list) and the commented biopol workbook of 19 Nov.
 
+- RAW timber (both files): the recycled-content CFF rows were taken out of the first step (the allocation factor A,
+  the quality ratios, and the (1 − A) × Qs/Qp virgin sawnwood row). The reclaimed wood is now one physical flow
+  (0.99 kg per kg entering the first step, plus 0.01 kg virgin sawnwood); the model applies the CFF to it (step 1d).
+
+**Rule for all LCI sheets:** they hold physical flows only. How the benefit of recycling is shared between the user and
+the supplier of recycled material is applied by the model (`03_model/1_unit_lcia/1d_calculate_cff.py`).
+
 The model only reads the `amount` column (the typical value); formulas and ranges stay in the sheets for later use.

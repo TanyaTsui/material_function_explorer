@@ -29,7 +29,7 @@ intermediate result is a CSV you can open in Excel. It runs once to produce the 
   01_raw/
     LCIs/                      one LCI sheet per case (Brightway Excel format); see its README
     cff_and_carbon_inputs/     per case: CFF archetype and end-of-life shares; constituents and carbon archetypes
-    method_constants/          CFF and carbon archetype tables, avoided datasets of module D, GWP_bio and Bern tables
+    method_constants/          CFF and carbon archetype tables, the ecoinvent datasets of the CFF, GWP_bio and Bern tables
     function_material_map/     [component 2] functions, Ashby archetypes, material properties
   02_processed/
     unit_impacts_by_module_<today|2050>.csv   ◀ result of component 1
@@ -56,7 +56,7 @@ cd 03_model/1_unit_lcia
 python 1a_import_lcis.py                  # LCI sheets -> one table of exchanges
 python 1b_calculate_background_impacts.py # Brightway: impact of 1 unit of each ecoinvent dataset (today, 2050)
 python 1c_calculate_lcia_modules.py       # modules A1–A3 ... C3–C4
-python 1d_calculate_module_d.py           # module D (circular footprint formula)
+python 1d_calculate_cff.py                # circular footprint formula: recycled input (A1–A3) and module D
 python 1e_calculate_biogenic_carbon.py    # CO2 stored in the product
 python 1f_combine_unit_impacts.py         # -> 01_data/02_processed/unit_impacts_*.csv
 python 1g_check_unit_impacts.py           # checks and one figure
@@ -71,7 +71,7 @@ database name, edit `03_model/settings.py`.
 
 | To change | Edit | Then run |
 |---|---|---|
-| an LCI | the sheet in `01_data/01_raw/LCIs/` | 1a to 1g |
+| an LCI (physical flows only; recycling allocation is applied by the model) | the sheet in `01_data/01_raw/LCIs/` | 1a to 1g |
 | end-of-life shares or CFF archetype of a case | `cff_and_carbon_inputs/cff_inputs.csv` | 1d, 1f, 1g |
 | the constituents of a case | `cff_and_carbon_inputs/bioc_inputs.csv` | 1e, 1f, 1g |
 | a CFF or carbon parameter | `method_constants/*.csv` | 1d or 1e, then 1f, 1g |

@@ -4,8 +4,9 @@ Step 1g: check the unit impact tables, and draw one figure to look at them.
 Checks (the script stops with an error if one of the first three fails):
   1. Both scenarios have all cases, all modules and no empty values.
   2. The total table is the sum of the modules in the by-module table.
-  3. The sum of modules A1–A3 to C3–C4 equals an independent calculation: the whole foreground of each LCI solved as a
-     system of linear equations (the usual matrix method of LCA) instead of block by block as in step 1c.
+  3. The sum of modules A1–A3 to C3–C4 (step 1c, without the CFF rows of step 1d) equals an independent calculation:
+     the whole foreground of each LCI solved as a system of linear equations (the usual matrix method of LCA) instead
+     of block by block as in step 1c.
   4. For information: GWP-fossil of A1–A3 today compared with the value the protocol agents calculated for the same
      material during the official run (epd_check.csv). The two should be close; a large gap points to an LCI that
      was changed after the run, or to a different characterisation.
@@ -40,7 +41,7 @@ for scenario in s.SCENARIOS:
     by_module = pd.read_csv(s.PROCESSED_DATA / f"unit_impacts_by_module_{scenario}.csv")
     total = pd.read_csv(s.PROCESSED_DATA / f"unit_impacts_total_{scenario}.csv")
     assert sorted(total.case_id) == cases, f"{scenario}: the total table does not have all {len(cases)} cases"
-    expected_rows = len(cases) * ((len(s.MODULES) + 1) * len(categories) + 1)
+    expected_rows = len(cases) * (len(s.ALL_MODULES) * len(categories) + 1)      # + 1: the stored CO2 row
     assert len(by_module) == expected_rows, f"{scenario}: {len(by_module)} rows in the by-module table, " \
                                             f"expected {expected_rows}"
     assert not by_module.value.isna().any(), f"{scenario}: empty values in the by-module table"
@@ -121,7 +122,7 @@ comparison.round(3)
 # %% Figure: climate change per module, today
 by_module = pd.read_csv(s.PROCESSED_DATA / "unit_impacts_by_module_today.csv")
 cc = by_module[by_module.impact_category == "climate change"].pivot(index="case_id", columns="module", values="value")
-cc = cc[s.MODULES + ["D"]]
+cc = cc[s.ALL_MODULES]
 cc = cc.loc[cc.sum(axis=1).sort_values().index]
 
 fig, ax = plt.subplots(figsize=(8, 10))

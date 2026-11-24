@@ -36,3 +36,11 @@ METHOD_FAMILY = ("ecoinvent-3.12", "EF v3.1")
 
 # ── Life cycle modules (EN 15804), in the order of the chain in the LCI sheets ─────────────────────────────────────
 MODULES = ["A1–A3", "A4", "A5", "C1", "C2", "C3–C4"]
+
+# The two parts of the circular footprint formula (step 1d), reported as their own rows next to the modules:
+# the correction of A1–A3 for recycled input, and module D.
+CFF_RECYCLED_CONTENT = "A1–A3 recycled content (CFF)"
+MODULE_D = "D"
+
+# All rows of the unit impact tables, in the order they are shown.
+ALL_MODULES = ["A1–A3", CFF_RECYCLED_CONTENT, "A4", "A5", "C1", "C2", "C3–C4", MODULE_D]

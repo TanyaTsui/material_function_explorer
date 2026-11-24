@@ -1,0 +1,15 @@
+item,role,name,reference product,location,unit,note
+market for wood chips,avoided product (module D),"market for wood chips, green, measured as dry mass","wood chips, green, measured as dry mass",Europe without Switzerland,kilogram,location chosen by Claude (24 Nov 2026); checked by Tanya
+market for gravel,avoided product (module D),"market for gravel, crushed","gravel, crushed",CH,kilogram,location chosen by Claude (24 Nov 2026); checked by Tanya
+market for gypsum,avoided product (module D),"market for gypsum, mineral","gypsum, mineral",RER,kilogram,location chosen by Claude (24 Nov 2026); checked by Tanya
+market for silica sand,avoided product (module D),market for silica sand,silica sand,GLO,kilogram,location chosen by Claude (24 Nov 2026); checked by Tanya
+market for basalt,avoided product (module D),market for basalt,basalt,GLO,kilogram,location chosen by Claude (24 Nov 2026); checked by Tanya
+market for pig iron,avoided product (module D),market for pig iron,pig iron,RER,kilogram,location chosen by Claude (24 Nov 2026); checked by Tanya
+market for primary aluminium,avoided product (module D),"market for aluminium, primary, ingot","aluminium, primary, ingot","IAI Area, Western and Central Europe",kilogram,location chosen by Claude (24 Nov 2026); checked by Tanya
+market for PVC,avoided product (module D),"market for polyvinylchloride, suspension polymerised","polyvinylchloride, suspension polymerised",RER,kilogram,location chosen by Claude (24 Nov 2026); checked by Tanya
+avoided electricity,avoided product (module D),"market group for electricity, medium voltage","electricity, medium voltage",RER,kilowatt hour,location chosen by Claude (24 Nov 2026); checked by Tanya
+avoided heat,avoided product (module D),"market group for heat, district or industrial, natural gas","heat, district or industrial, natural gas",RER,megajoule,location chosen by Claude (24 Nov 2026); checked by Tanya
+virgin sawnwood,virgin material (recycled content),"market for sawnwood, softwood, raw","sawnwood, softwood, raw",GLO,kilogram,the virgin wood of the RAW timber LCI
+reclaimed wood,recycled material (recycled content),"market group for waste wood, untreated","waste wood, untreated",RER,kilogram,the reclaimed wood of the RAW timber LCI (proxy carried over from v19)
+virgin structural steel,virgin material (recycled content),"steel production, converter, unalloyed","steel, unalloyed",RER,kilogram,"primary (blast furnace / converter) route, chosen by Claude (24 Nov 2026); check: ideally the primary-route equivalent of the scrap dataset, at the same processing stage"
+scrap-based structural steel,recycled material (recycled content),"market for steel, structural, 100% scrap","steel, structural, 100% scrap",GLO,kilogram,the steel of the structural steel LCI

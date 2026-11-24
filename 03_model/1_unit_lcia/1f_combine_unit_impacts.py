@@ -4,11 +4,12 @@ Step 1f: combine the results of steps 1c, 1d and 1e into the four unit impact ta
 Per scenario (today, 2050):
 
   unit_impacts_by_module_<scenario>.csv   long table, one row per case x module x impact category:
-                                          modules A1–A3, A4, A5, C1, C2, C3–C4 and D, plus one row per case with the
-                                          biogenic CO2 stored in the product (module 'in product', kg CO2)
+                                          A1–A3, A1–A3 recycled content (CFF), A4, A5, C1, C2, C3–C4 and D, plus one
+                                          row per case with the biogenic CO2 stored in the product (module
+                                          'in product', kg CO2)
   unit_impacts_total_<scenario>.csv       wide table, one row per case, one column per impact category:
-                                          the sum of all modules (A1–A3 + A4 + A5 + C1 + C2 + C3–C4 + D), and a last
-                                          column with the biogenic CO2 stored in the product
+                                          the sum of all these rows except the stored CO2, and a last column with the
+                                          biogenic CO2 stored in the product
 
 All values are per kg of product. Module B is not included: it depends on the function (component 2).
 The stored biogenic CO2 is not inside 'climate change' (see step 1e).
@@ -43,8 +44,8 @@ def case_type(case_id):
 # %% Combine, scenario by scenario
 for scenario in s.SCENARIOS:
     modules_a_to_c = pd.read_csv(s.STEPS_FOLDER / f"1c_lcia_modules_{scenario}.csv")
-    module_d = pd.read_csv(s.STEPS_FOLDER / f"1d_module_d_{scenario}.csv")
-    wide = pd.concat([modules_a_to_c, module_d])
+    cff = pd.read_csv(s.STEPS_FOLDER / f"1d_cff_{scenario}.csv")       # recycled content (CFF) and module D
+    wide = pd.concat([modules_a_to_c, cff])
 
     # long table: one row per case x module x impact category
     long = wide.melt(id_vars=["case_id", "module"], var_name="impact_category", value_name="value")
@@ -53,7 +54,7 @@ for scenario in s.SCENARIOS:
     stored = stored.assign(module="in product", impact_category="biogenic CO2 stored", unit="kg CO2")
     long = pd.concat([long, stored])
     long.insert(1, "case_type", long.case_id.map(case_type))
-    module_order = {m: i for i, m in enumerate(s.MODULES + ["D", "in product"])}
+    module_order = {m: i for i, m in enumerate(s.ALL_MODULES + ["in product"])}
     long["module_order"] = long.module.map(module_order)
     long = long.sort_values(["case_id", "module_order", "impact_category"])
     long = long[["case_id", "case_type", "module", "impact_category", "unit", "value"]]

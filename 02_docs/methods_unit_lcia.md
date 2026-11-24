@@ -35,6 +35,7 @@ the RAW sheets are not used here.
 | C2 transport to waste processing | yes | LCI sheet |
 | C3–C4 waste processing and disposal | yes | LCI sheet |
 | D benefits beyond the system boundary | yes | calculated (section 4) |
+| CFF correction for recycled input (part of A1–A3) | yes, on its own row | calculated (section 4) |
 | Biogenic carbon stored in the product | reported separately | calculated (section 5) |
 
 The RAW workbooks originally also held B3 (repair) and B4 (replacement) blocks. They were removed when the workbooks
@@ -43,68 +44,97 @@ were split per variant (24 Nov 2026), so that module B is counted once, in compo
 ## 3. Modules A and C (steps 1a to 1c)
 
 Each LCI sheet is a chain of blocks: A1–A3 → A4 → A5 → C1 → C2 → C3–C4. Each block's first input is the output of the
-block before it, so the last activity of a block carries everything up to the end of that block.
+block before it, so the last activity of a block needs everything up to the end of that block.
 
 1. **Impact of one unit of every ecoinvent dataset used** (step 1b, Brightway): for each background dataset of the LCIs
-   and each avoided product of module D, the EF 3.1 score of one unit (1 kg, 1 kWh, 1 tkm, 1 MJ, ...), per scenario.
+   and each dataset of the CFF (section 4), the EF 3.1 score of one unit (1 kg, 1 kWh, 1 tkm, 1 MJ, ...), per scenario.
    A dataset missing in the 2050 database gets today's value (noted in the output table).
-2. **Cumulative impact of an activity**, per unit of its output:
+2. **Cumulative inventory of an activity** (step 1c), per unit of its output: the amount of every ecoinvent dataset it
+   needs, upstream included:
 
-   `cumulative(activity) = Σ over its inputs of amount × cumulative(input) / amount produced`
+   `inventory(activity) = Σ over its inputs of amount × inventory(input) / amount produced`
 
-   where `cumulative(input)` is the score from step 1 for an ecoinvent dataset, or the same calculation for an
-   activity of the same LCI sheet.
-3. **Impact of a module**: `impact(M) = cumulative(end of M) − cumulative(end of the module before M)`, with
-   `cumulative(before A1–A3) = 0`. The modules therefore add up to the cradle-to-grave impact of 1 kg.
+   where the inventory of an ecoinvent input is just its own amount, and the inventory of an activity of the same LCI
+   sheet is found the same way.
+3. **Inventory of a module**: `inventory(M) = inventory(end of M) − inventory(end of the module before M)`, with nothing
+   before A1–A3. The modules therefore add up to the cradle-to-grave inventory of 1 kg.
+4. **Impact of a module** = Σ over its inventory of amount × impact of one unit (step 1).
+
+The inventory per module (`unit_lcia_steps/1c_inventory_by_module.csv`) is the same in both scenarios and shows, for
+every case, how much of each ecoinvent dataset each module uses.
 
 **Losses.** When A5 needs, for example, 1.03 kg delivered per kg installed, step 3 subtracts 1 kg (not 1.03 kg) of the
-A4 cumulative impact, so the production and transport of the lost 0.03 kg are counted in A5, as EN 15804 asks.
+A4 inventory, so the production and transport of the lost 0.03 kg are counted in A5, as EN 15804 asks.
 
 **Check.** Step 1g recomputes the cradle-to-grave impact of every case with the matrix method (all foreground
 activities of the sheet solved as one system of linear equations) and stops if it differs from the sum of the modules.
 
-## 4. Module D: circular footprint formula (step 1d)
+## 4. Circular footprint formula: recycled input and module D (step 1d)
 
-Module D follows the circular footprint formula (CFF) of the EU Environmental Footprint method. Each case belongs to one
-CFF archetype (`cff_inputs.csv`). The archetype gives the parameters (`method_constants/cff_archetypes.csv`, values and
-sources from the protocol workbook), and the case gives its end-of-life shares (the same shares as its C3–C4 block).
-Per kg of product:
+**Principle.** The LCI sheets hold only physical flows: what goes in and out, in what amounts. The allocation of
+recycling between the user and the supplier of recycled material is a method choice, applied by the model on both
+sides with the circular footprint formula (CFF) of the EU Environmental Footprint method and one set of parameters.
+
+Why both sides: ecoinvent's cut-off datasets give recycled material without the burden of the product it came from
+(the user keeps the whole benefit, as if A = 1). The CFF gives the user the share A of the benefit and the supplier at
+end of life the share 1 − A. Crediting the supplier in module D while the user also keeps the whole benefit in A1–A3
+would count the share 1 − A twice (for metals, A = 0.2: 80 % of the benefit twice).
+
+Each case belongs to one CFF archetype, or to one per part (`cff_inputs.csv`). The archetype gives the parameters and
+the datasets (`method_constants/cff_archetypes.csv`; values and sources from the protocol workbook), the case gives
+its end-of-life shares (the same shares as its C3–C4 block). Per kg of product:
 
 ```
-material credit = −(1 − A) × (R_recycling + R_reuse) × (Qsout / Qp) × E_avoided material
-energy credit   = −(1 − B) × R_incineration × LHV × (X_heat × E_heat + X_el × E_el / 3.6)
-module D        = material credit + energy credit
+recycled content (added to A1–A3) = m_recycled × (1 − A) × (Qsin/Qp × E_virgin − E_recycled)
+material credit (D)               = −(1 − A) × (R_recycling + R_reuse) × (Qsout/Qp) × E_avoided product
+energy credit (D)                 = −(1 − B) × R_incineration × LHV × (X_heat × E_heat + X_el × E_el / 3.6)
 ```
 
-A case whose parts belong to different archetypes has one row per part, each with its mass share, and module D is
-`Σ mass share × (material credit + energy credit)` over its parts. Only reinforced concrete has two parts so far:
-concrete (95.5 %, mineral archetype) and reinforcing steel (4.5 %, steel archetype), both with the shares of its C3–C4
-block (99 % to reinforced concrete recycling, where the rebar is recovered, 1 % landfill).
+**Recycled content.** `m_recycled` is the kg of the archetype's recycled material in the A1–A3 inventory of the case
+(step 1c), so the recycled content is read from the LCI itself, losses in production included. With the correction,
+each kg of recycled input costs `A × E_recycled + (1 − A) × Qsin/Qp × E_virgin`, as the CFF asks. The correction is
+reported on its own row, "A1–A3 recycled content (CFF)", next to A1–A3. Two cases have one:
+
+| Case | Recycled material in the LCI | Virgin material it stands in for | A, Qsin/Qp |
+|---|---|---|---|
+| RAW timber (prototype and scaled-up) | reclaimed wood (waste wood market, as in v19), 1.25 kg per kg of product | virgin sawnwood | 0.8, 1 |
+| Structural steel | steel, structural, 100 % scrap, 1 kg per kg | converter steel (to check) | 0.2, 1 |
+
+Until 24 Nov 2026 the RAW timber LCI applied this correction in its own sheet (with Qsin/Qp = 0.9); it now holds the
+plain flows (0.99 kg reclaimed wood and 0.01 kg virgin sawnwood per kg entering the first step) and the model applies the
+correction with the archetype's values.
+
+**Module D.** Material credit + energy credit. A case whose parts belong to different archetypes has one row per part,
+each with its mass share, and module D is `Σ mass share × (material credit + energy credit)` over its parts. Only
+reinforced concrete has two parts so far: concrete (95.5 %, mineral archetype) and reinforcing steel (4.5 %, steel
+archetype), both with the shares of its C3–C4 block (99 % to reinforced concrete recycling, where the rebar is recovered,
+1 % landfill).
 
 | Symbol | Meaning | Source |
 |---|---|---|
-| A | allocation of burdens and credits between supplier and user of recycled material | archetype (JRC Annex C defaults where available) |
-| R1 | recycled content: share of the material entering production that is already recycled (not used in module D; see below) | archetype |
+| A | allocation of the benefit of recycling between the user (A) and the supplier (1 − A) of recycled material | archetype (JRC Annex C defaults where available) |
+| m_recycled | kg of recycled input per kg of product (the CFF's R1, as an amount) | the LCI, through the inventory of step 1c |
+| Qsin/Qp, Qsout/Qp | quality of the recycled input / output relative to the primary material | archetype (JRC defaults for glass and metals; otherwise assumptions) |
+| E_virgin, E_recycled | impact of 1 kg of the virgin material and of the recycled material as the LCI uses it | step 1b; datasets in `method_constants/cff_datasets.csv` |
 | mass share | share of the case's mass that belongs to this archetype (1 unless the case has parts) | `cff_inputs.csv` |
 | R_recycling, R_reuse, R_incineration | end-of-life shares | `cff_inputs.csv` (NMD end-of-life defaults, as in C3–C4) |
-| Qsout/Qp | quality of the recycled output relative to the primary material it replaces | archetype |
 | B | allocation factor of energy recovery; 0 in the EF method | archetype |
 | LHV | lower heating value, MJ per kg | archetype |
 | X_heat, X_el | heat and electricity efficiency of the incinerator | archetype |
-| E_avoided material, E_heat (per MJ), E_el (per kWh) | impact of the avoided product | step 1b; datasets in `method_constants/avoided_datasets.csv` |
+| E_avoided product, E_heat (per MJ), E_el (per kWh) | impact of the avoided product and energy | step 1b; datasets in `cff_datasets.csv` |
 
 **Choices and limitations**
 
+- **Recycled content is only corrected where the LCI shows it as its own flow** (the archetype's recycled material).
+  Datasets that mix primary and recycled material inside ecoinvent are not corrected, because the model cannot see their
+  recycled share: the aluminium market used for aluminium extrusion, the reinforcing steel of reinforced concrete, flat
+  glass (cullet), and possibly wood panels and gypsum board. For aluminium this matters most (module D credits 94 %
+  recycling). The fix, in the spirit of the principle above, is to write such an LCI as explicit primary and recycled
+  flows, as for RAW timber. Open point.
 - **Reuse is credited like recycling.** The RAW LCI sheets treat reuse as recycling under cut-off; module D does the same.
-- **The recycled-content term (R1) of the CFF is not applied.** The LCI datasets already contain the product's recycled
-  input under the cut-off rule (burden-free scrap). Applying the full CFF would add `(1 − A) × R1 × (E_v × Qsin/Qp − E_recycled)`
-  to A1–A3. This matters most for structural steel (R1 = 1) and aluminium extrusion (R1 = 0.75), whose A1–A3 is lower
-  here than under the full CFF. Open point.
 - **The recycling process at end of life is counted in full in C3–C4** (as in the LCI sheet), not multiplied by (1 − A).
-- **The RAW timber LCI already applies the CFF to its recycled input inside A1–A3** (A × waste wood + (1 − A) × Qs/Qp ×
-  virgin sawnwood). The baselines do not; see the R1 point above.
-- **The avoided datasets** (`avoided_datasets.csv`) were matched by name; their locations were chosen by us and are
-  marked "check".
+- **The datasets of `cff_datasets.csv`** were matched by name; those marked "check" (e.g. converter steel as the virgin
+  counterpart of scrap-based structural steel, at a different processing stage) need confirming.
 - EN 15804+A2 (behind the ÖKOBAUDAT EPDs used in the protocol check) uses a different module D rule; the CFF is used here
   because the impact method is the EF method.
 
@@ -137,8 +167,8 @@ Not included: CO2 taken up by lime binders as they carbonate (relevant for hempc
 
 | File | Shape | Content |
 |---|---|---|
-| `unit_impacts_by_module_<scenario>.csv` | long: one row per case × module × impact category | modules A1–A3, A4, A5, C1, C2, C3–C4, D; plus one row per case with module `in product`, category `biogenic CO2 stored`, unit kg CO2 |
-| `unit_impacts_total_<scenario>.csv` | wide: one row per case | one column per impact category (unit in the column name) = sum of all modules A1–A3 to C3–C4 and D; last column: biogenic CO2 stored (kg CO2) |
+| `unit_impacts_by_module_<scenario>.csv` | long: one row per case × module × impact category | A1–A3, A1–A3 recycled content (CFF), A4, A5, C1, C2, C3–C4, D; plus one row per case with module `in product`, category `biogenic CO2 stored`, unit kg CO2 |
+| `unit_impacts_total_<scenario>.csv` | wide: one row per case | one column per impact category (unit in the column name) = sum of all these rows; last column: biogenic CO2 stored (kg CO2) |
 
 `case_type` is `baseline`, `RAW prototype` or `RAW scaled-up`. All values are per kg of product.
 
@@ -153,4 +183,4 @@ Intermediate tables of each step are in `01_data/02_processed/unit_lcia_steps/`,
   protocol run, which had one (unreinforced) concrete. Reinforced concrete has an extra steel row in `cff_inputs.csv`
   (4.5 % of the mass, from its A1–A3); its constituent list in `bioc_inputs.csv` lacks the steel, which holds no
   biogenic carbon, so the stored CO2 (0) is unaffected.
-- **Locations of the avoided datasets** of module D.
+- **The datasets of `cff_datasets.csv`** marked "check" (locations, and the virgin counterpart of scrap steel).
