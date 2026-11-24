@@ -1,0 +1,4 @@
+run_id,material_id,cff_archetype,recycling_share,reuse_share,incineration_share,landfill_share,flag,note
+run_B,osb3,Wood panels,0.1,0,0.85,0.05,,NMD category 55
+run_B,cork,Other plant-based,0,0,0.95,0.05,check 3 failed (flagged),NMD category 52
+run_B,hempcrete,"Mineral, crushed to aggregate",0.99,0,0,0.01,NMD category closest (assumption),NMD category 8

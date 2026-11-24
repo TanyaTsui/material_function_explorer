@@ -1,0 +1,9 @@
+run_id,material_id,constituent,kg_per_kg_product,carbon_archetype,moisture_content,flag,note
+run_A,osb3,"wood strands, incl. moisture",0.93,Wood,0.0508,,moisture from input note: water 4.5 % ÷ wood 88.5 % (dry basis)
+run_A,osb3,"adhesive, PMDI/MUF",0.051,Non-biogenic,,,
+run_A,osb3,paraffin wax,0.019,Non-biogenic,,,
+run_A,hempcrete,hemp shiv,0.342,Cellulose fibres and stalks,,,no moisture given in input → archetype default
+run_A,hempcrete,air lime,0.108,Non-biogenic,,,
+run_A,hempcrete,natural hydraulic lime,0.422,Non-biogenic,,,
+run_A,hempcrete,water,0.128,Non-biogenic,,,
+run_A,cork,raw cork granules,1.0,Cork,,,1.06 input minus the stated 6 % loss = 1.00 kg in the product; no moisture in input → archetype default

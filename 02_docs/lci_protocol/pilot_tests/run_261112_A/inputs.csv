@@ -1,0 +1,4 @@
+material_id,name_and_class,standard,delivered_state,element_types,function_id,function_name,outdoor,service_life_years
+osb3,OSB/3,EN 300,"boards as sold, unfinished, standard thickness",Structural · Interior,F06,Floor or roof deck panel,no,50
+hempcrete,Hempcrete (hemp-lime),none,"blocks as sold, no render",Walls,F07,Interior partition wall,no,50
+cork,Cork board (expanded / agglomerated),EN 13170,"boards as sold, no facing",Interior · Walls,F10,Exterior rainscreen cladding,yes,40

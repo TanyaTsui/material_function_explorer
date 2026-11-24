@@ -1,0 +1,5 @@
+run_id,material_id,cff_archetype,recycling_share,reuse_share,incineration_share,landfill_share,flag,note
+batch_2,sawn_hardwood_oak,Solid wood,0.1,0.05,0.8,0.05,,"NMD category 34 wood, untreated: beams, planks"
+batch_2,cotton_canvas,Other plant-based,0.0,0.0,0.95,0.05,,"NMD category 52 organic / bio-based, other"
+batch_2,ceramic_tile,"Mineral, crushed to aggregate",0.8,0.05,0.0,0.15,,NMD category 25 fine ceramics
+batch_2,pvc_u,PVC,0.8,0.0,0.1,0.1,,NMD category 63 PVC window profiles

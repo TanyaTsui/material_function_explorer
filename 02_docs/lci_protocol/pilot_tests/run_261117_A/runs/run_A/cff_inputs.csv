@@ -1,0 +1,4 @@
+run_id,material_id,cff_archetype,recycling_share,reuse_share,incineration_share,landfill_share,flag,note
+run_A,osb3,Wood panels,0.1,0.0,0.85,0.05,,shares from C2 · ROUTE (NMD 55)
+run_A,hempcrete,"Mineral, crushed to aggregate",0.99,0.0,0.0,0.01,,"shares from C2 · ROUTE (NMD 8, closest category per sheet)"
+run_A,cork,Other plant-based,0.0,0.0,0.95,0.05,,shares from C2 · ROUTE (NMD 52)

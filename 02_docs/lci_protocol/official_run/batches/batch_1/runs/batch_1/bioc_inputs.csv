@@ -1,0 +1,13 @@
+run_id,material_id,constituent,kg_per_kg_product,carbon_archetype,moisture_content,flag,note
+batch_1,sawn_softwood,"softwood timber, incl. 12 % moisture",1,Wood,0.12,,u = 12 % from input note
+batch_1,cork,raw cork granules,1.0,Cork,,,1.06 kg input minus 0.06 kg loss
+batch_1,fibre_cement,cement,0.714,Non-biogenic,,,
+batch_1,fibre_cement,pigments,0.095,Non-biogenic,,,
+batch_1,fibre_cement,cellulose fibre,0.048,Cellulose fibres and stalks,,,
+batch_1,fibre_cement,water,0.071,Non-biogenic,,,
+batch_1,fibre_cement,coating,0.024,Non-biogenic,,,
+batch_1,fibre_cement,"other (PVA fibre, fillers)",0.048,Non-biogenic,,,
+batch_1,stone_wool,diabase / basalt,0.37,Non-biogenic,,,
+batch_1,stone_wool,cement-bonded briquettes (recycled),0.59,Non-biogenic,,,
+batch_1,stone_wool,"binder, urea-modified phenol-formaldehyde",0.035,Non-biogenic,,,
+batch_1,stone_wool,mineral oil,0.002,Non-biogenic,,,

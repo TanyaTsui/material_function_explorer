@@ -1,0 +1,31 @@
+material_id,name_and_class,standard,delivered_state,element_types,function_id,function_name,outdoor,service_life_years,review_note
+sawn_softwood,Sawn softwood (C16–C30),EN 14081-1,"planed, kiln dried, strength graded, untreated",Structural · Facade · Interior,F02,Floor joists,no,50,standard/state are my draft
+sawn_hardwood,"Sawn hardwood, oak (D30–D40)",EN 14081-1,"planed, kiln dried, strength graded, untreated",Structural · Facade · Interior,F10,Exterior rainscreen cladding,yes,40,standard/state are my draft; function chosen to test outdoor path
+glulam,Glulam (GL24h–GL32h),EN 14080,"beams as sold, planed, unfinished, indoor use",Structural,F01,Structural beam,no,50,standard/state are my draft
+clt,Cross-laminated timber,EN 16351,"panels as sold, unfinished, standard layup",Structural · Walls,F08,Load-bearing wall,no,50,standard/state are my draft
+bamboo_eng,Engineered bamboo (laminated / strand-woven),none,"boards/beams as sold, unfinished",Structural · Facade · Interior,F22,Stair tread,no,50,no harmonised EN standard that I know of: please confirm
+plywood,Plywood (spruce–birch),EN 636,"boards as sold, unfinished, standard thickness",Structural · Interior · Facade,F11,Ceiling panel,no,25,standard/state are my draft
+osb3,OSB/3,EN 300,"boards as sold, unfinished, standard thickness",Structural · Interior,F06,Floor or roof deck panel,no,50,PILOT: identical to run_A/B
+mdf,MDF,EN 622-5,"boards as sold, unfinished, standard thickness",Interior,F14,Skirting board,no,25,standard/state are my draft
+woodfibre_soft,Soft wood fibre board,EN 13171,"boards as sold, no facing",Interior (absorber),F12,Acoustic absorber panel,no,25,standard/state are my draft
+cork,Cork board (expanded / agglomerated),EN 13170,"boards as sold, no facing",Interior · Walls,F10,Exterior rainscreen cladding,yes,40,PILOT: identical to run_A/B
+hemp_mat,Hemp fibre mat,none,"mats as sold, no facing",Interior (absorber),F12,Acoustic absorber panel,no,25,no harmonised standard that I know of: please confirm
+mycelium,Mycelium composite,none,"boards as sold, no facing",Interior · Walls,F09,Interior wall lining board,no,40,no standard; function is my draft
+straw_bale,Straw bale,none,"bales as sold, no render",Walls,F07,Interior partition wall,no,50,"no standard; function is my draft (infill, not load-bearing)"
+hempcrete,Hempcrete (hemp-lime),none,"blocks as sold, no render",Walls,F07,Interior partition wall,no,50,PILOT: identical to run_A/B
+flax_composite,Flax-fibre composite (flax-epoxy),none,"panels as sold, unfinished",Facade · Structural,F10,Exterior rainscreen cladding,yes,40,no standard; function is my draft
+cotton_canvas,Cotton canvas,none,"fabric as sold, untreated, roll",Membranes,F16,Interior tensioned membrane,no,20,no standard; function is my draft
+hemp_fabric,Hemp canvas,none,"fabric as sold, untreated, roll",Membranes,F17,Outdoor shade sail,yes,15,no standard; function is my draft
+steel,Structural steel (S235–S355),EN 10025-2,"hot-rolled sections as sold, no coating",Structural · Facade,F03,Column,no,50,standard/state are my draft
+aluminium,Aluminium extrusion (6060/6063),EN 755-2,"extruded profiles as sold, mill finish",Facade · Structural,F18,Facade louvres,yes,30,standard/state are my draft
+concrete,Concrete (C20/25–C40/50),EN 206,"ready-mixed, unreinforced, as delivered",Structural · Walls · Interior,F08,Load-bearing wall,no,50,"standard/state are my draft (reinforcement is an assembly, excluded)"
+clay_brick,Clay brick masonry,EN 771-1,"bricks as sold, no mortar",Walls · Facade,F08,Load-bearing wall,no,50,standard/state are my draft
+aac,Autoclaved aerated concrete,EN 771-4,"blocks as sold, no render",Walls,F07,Interior partition wall,no,50,standard/state are my draft
+gypsum_board,Gypsum plasterboard,EN 520,"boards as sold, standard type A, no finish",Interior · Walls,F09,Interior wall lining board,no,40,standard/state are my draft
+fibre_cement,Fibre cement board,EN 12467,"boards as sold, unpainted",Facade · Interior,F10,Exterior rainscreen cladding,yes,40,standard/state are my draft
+ceramic_tile,Ceramic tile (porcelain),EN 14411,"tiles as sold, unglazed or glazed, no adhesive",Interior (floor) · Facade,F15,Floor finish,no,25,standard/state are my draft
+glass,Toughened glass,EN 12150-1,"panes as sold, uncoated, no frame",Interior (balustrade) · Facade,F23,Balustrade infill panel,no,40,standard/state are my draft
+stone_wool,Stone wool board,EN 13162,"boards as sold, no facing","Interior (absorber, ceiling)",F11,Ceiling panel,no,25,standard/state are my draft
+pvc_u,PVC-U profile,EN 12608-1,"profiles as sold, white, no hardware",Facade (window frame),F24,Window frame member,yes,40,standard/state are my draft
+pvc_polyester,PVC-coated polyester fabric,none,"fabric as sold, roll",Membranes,F17,Outdoor shade sail,yes,15,no standard; function is my draft
+ptfe_glass,PTFE-coated glass-fibre fabric,none,"fabric as sold, roll",Membranes,F25,Facade screen mesh,yes,30,no standard; function is my draft

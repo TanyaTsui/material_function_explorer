@@ -1,0 +1,5 @@
+run_id,material_id,cff_archetype,recycling_share,reuse_share,incineration_share,landfill_share,flag,note
+batch_6,mdf,Wood panels,10,0,85,5,flagged (REVIEW),"shares in % of mass, as in sheet nmd_eol (NMD 55 board material, clean); mdf: flagged, see epd_check REVIEW"
+batch_6,clay_brick_masonry,"Mineral, crushed to aggregate",99,0,0,1,flagged (REVIEW),"shares in % of mass, as in sheet nmd_eol (NMD 32 coarse ceramics, masonry); brick: flagged, CHECK 3 failed"
+batch_6,structural_steel,Steel,94,5,0,1,,"shares in % of mass, as in sheet nmd_eol (NMD 70 steel, structural sections)"
+batch_6,pvc_coated_polyester,Coated fabrics and composites,5,0,85,10,,"shares in % of mass, as in sheet nmd_eol (NMD 62 PVC films, roofing)"

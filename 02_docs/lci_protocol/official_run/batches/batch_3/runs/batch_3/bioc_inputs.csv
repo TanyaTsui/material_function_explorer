@@ -1,0 +1,11 @@
+run_id,material_id,constituent,kg_per_kg_product,carbon_archetype,moisture_content,flag,note
+batch_3,osb3,"wood strands, incl. moisture",0.93,Wood,,,
+batch_3,osb3,"adhesive, PMDI/MUF",0.051,Non-biogenic,,,
+batch_3,osb3,paraffin wax,0.019,Non-biogenic,,,
+batch_3,engineered_bamboo,"bamboo strips, incl. moisture",0.978,Bamboo,,,
+batch_3,engineered_bamboo,"adhesive, MUF",0.022,Non-biogenic,,,
+batch_3,hemp_fibre_mat,hemp fibre,0.85,Cellulose fibres and stalks,,,
+batch_3,hemp_fibre_mat,bicomponent polyester fibre,0.12,Non-biogenic,,,
+batch_3,hemp_fibre_mat,soda (sodium carbonate),0.03,Non-biogenic,,,
+batch_3,straw_bale,wheat / rye straw,0.998,Cellulose fibres and stalks,,,
+batch_3,straw_bale,polypropylene twine,0.002,Non-biogenic,,,

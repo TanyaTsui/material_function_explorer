@@ -1,0 +1,137 @@
+run_id,material_id,question_id,answer,value,unit,evidence,source_link,search_step,date
+batch_4,plywood,D1,yes,"market for plywood, RER",,"ecoinvent 'plywood' (veneer sheets glued with urea-formaldehyde resin, sanded, cut) = hardwood veneer + adhesive, as in the input (veneer 0.922, adhesive 0.077); extra process inputs (tap water, lubricating oil, steel) are not constituents; wet mass 823 kg/m3, 7.1 % water, close to input (796 kg/m3, 6.8 % water)",,plywood; veneer; plywood production,2026-11-19
+batch_4,plywood,D1,note,ecoinvent adhesive share 87 kg UF resin / 823 kg = 10.6 % vs input 7.7 % (PF/UF/MUF adhesive and coating),,shares are not part of the D1 test; logged as difference,,,2026-11-19
+batch_4,plywood,D2,yes,market for plywood,,market dataset exists (RER and RoW),,,2026-11-19
+batch_4,plywood,D3,RER,,,European market group none; RER market exists (rule 2),,,2026-11-19
+batch_4,plywood,D4,single variant,,,"only one 'plywood' market per location; unit m3, 1 kg = 1/823 m3",,,2026-11-19
+batch_4,plywood,CHECK 1,yes,0.496,kg CO2e/kg,"ours 0.4959 vs median 0.4054 of 3 EPDs, ratio 1.22: within 0.5-1.5",,,2026-11-19
+batch_4,plywood,A4 · T1,no,,,delivered as boards,https://milieudatabase.nl/media/filer_public/08/97/08978af7-15a0-4412-a782-28aee7a91b83/bepalingsmethode-milieuprestatie-bouwwerken-juli-2020.pdf,,2026-11-19
+batch_4,plywood,A4 · T2,yes,,,DE: ÖKOBAUDAT EPD 'Veneer plywood (German average)' (DE); ES: Garnica (La Rioja); IT: Bellotti SpA (Cermenate); FR: Garnica France plants -> at least 3 of 5,,,2026-11-19
+batch_4,plywood,A4 · T3,,,,Garnica https://www.garnica.one/en-us/about-us.html ; Bellotti https://nauticexpo.com/soc/bellotti-spa-30295.html ; EPD https://www.oekobaudat.de/OEKOBAU.DAT/datasetdetail/process.xhtml?lang=en&uuid=1c01243d-fd22-4655-bfaf-484dc024d620,,,2026-11-19
+batch_4,plywood,A4 · T2,(archetype),national,lorry 150 km = 0.15 tkm,TRANSPORT · NATIONAL,https://milieudatabase.nl/media/filer_public/08/97/08978af7-15a0-4412-a782-28aee7a91b83/bepalingsmethode-milieuprestatie-bouwwerken-juli-2020.pdf,,2026-11-19
+batch_4,plywood,A5 · I1,no,39,kg per piece,"18 mm birch plywood sheet 2500 x 1250 mm weighs 39 kg (listing); at the EPD density 796 kg/m3 it is 44.8 kg: both under 50 kg, installed by hand (thickness 18 mm is a typical-board assumption)",https://www.penn-elcom.com/mc/18mm-thick-birch-wood-panel-m870018-eu,,2026-11-19
+batch_4,plywood,A5 · L1,no,,,prefab boards fixed dry -> 3 % waste (NMD),https://milieudatabase.nl/media/filer_public/08/97/08978af7-15a0-4412-a782-28aee7a91b83/bepalingsmethode-milieuprestatie-bouwwerken-juli-2020.pdf,,2026-11-19
+batch_4,plywood,A5 · LOSS,0.0309,kg lost per kg installed,,0.03/(1-0.03),https://milieudatabase.nl/media/filer_public/08/97/08978af7-15a0-4412-a782-28aee7a91b83/bepalingsmethode-milieuprestatie-bouwwerken-juli-2020.pdf,,2026-11-19
+batch_4,plywood,C1 · X1,no,39,kg per piece,"screwed/nailed boards under 50 kg, taken apart by hand; no diesel row",https://www.penn-elcom.com/mc/18mm-thick-birch-wood-panel-m870018-eu,,2026-11-19
+batch_4,plywood,C2 · ROUTE,"55 board material, clean",,landfill 5 / incineration 85 / recycling 10 / reuse 0 %,"sheet nmd_eol, row for 'plywood'",,https://milieudatabase.nl/en/downloads/download/appendix-default-values-for-end-of-life-processing-scenarios/,2026-11-19
+batch_4,plywood,C2 · TKM,,0.0925,tkm per kg,0.05x50 + 0.85x100 + 0.10x50 km / 1000,,,2026-11-19
+batch_4,plywood,W1: plywood × landfill,no,,,"no ecoinvent waste-treatment dataset named for plywood (searched 'waste plywood', 'treatment of waste wood'); -> W2 fallback class Wood, wood-based (sheet waste_fallback)",,,2026-11-19
+batch_4,plywood,W2: plywood × landfill,dataset,,,"treatment of waste wood, untreated, sanitary landfill (CH; RoW also exists; CH first in D3)",,,2026-11-19
+batch_4,plywood,W1: plywood × incineration,no,,,"no ecoinvent waste-treatment dataset named for plywood (searched 'waste plywood', 'treatment of waste wood'); -> W2 fallback class Wood, wood-based (sheet waste_fallback)",,,2026-11-19
+batch_4,plywood,W2: plywood × incineration,dataset,,,"treatment of waste wood, untreated, municipal incineration (GLO; only one with this name)",,,2026-11-19
+batch_4,plywood,W1: plywood × recycling,no,,,"no ecoinvent waste-treatment dataset named for plywood (searched 'waste plywood', 'treatment of waste wood'); -> W2 fallback class Wood, wood-based (sheet waste_fallback)",,,2026-11-19
+batch_4,plywood,W2: plywood × recycling,dataset,,,"treatment of waste wood, post-consumer, sorting and shredding (CH)",,,2026-11-19
+batch_4,plywood,D · CFF · F1,Wood panels,,,sheet cff_archetypes: plywood in 'Wood panels',,,2026-11-19
+batch_4,plywood,"D · BIO-C · B1: beech veneer, incl. moisture",Wood,,,sheet carbon_archetypes,,,2026-11-19
+batch_4,plywood,"D · BIO-C · B1: adhesive and coating, PF/UF/MUF",Non-biogenic,,,sheet carbon_archetypes,,,2026-11-19
+batch_4,aac,D1,no,,,"ecoinvent 'autoclaved aerated concrete block production' (CH, IN, RoW): sand 0.504, cement 0.26, quicklime 0.104, anhydrite 0.044, aluminium 0.0007 plus tap water 0.184 kg/kg (mass balance: ~0.09 kg water stays in the product) and packing; the input lists no water -> an extra constituent -> not an exact match (strict reading, see protocol_issues)",,autoclaved; aerated concrete; AAC,2026-11-19
+batch_4,aac,D1b,yes,"market for autoclaved aerated concrete block, CH",,same product (AAC block) and state; main constituent quartz sand in both (0.594 input; 0.504 dataset); differences logged in dataset_choices,,,2026-11-19
+batch_4,aac,D2,yes,market,,"market exists for CH, IN, RoW",,,2026-11-19
+batch_4,aac,D3,CH,,,"no European market group, RER, Europe w/o CH, DE, FR, IT, ES, NL, AT, SE, FI, PL market; CH is next in the country list (before GLO/RoW)",,,2026-11-19
+batch_4,aac,D4,single variant,,,one dataset per location,,,2026-11-19
+batch_4,aac,CHECK 2,yes,0.359,kg CO2e/kg,"ours 0.3594 vs median 0.4615 of 11 EPDs, ratio 0.78: within 0.5-1.5",,,2026-11-19
+batch_4,aac,A4 · T1,no,,,delivered as blocks/units,https://milieudatabase.nl/media/filer_public/08/97/08978af7-15a0-4412-a782-28aee7a91b83/bepalingsmethode-milieuprestatie-bouwwerken-juli-2020.pdf,,2026-11-19
+batch_4,aac,A4 · T2,yes,,,DE: Xella 10 German AAC plants (EPD); IT: Xella Italia (ÖKOBAUDAT dataset in material_overview); NL: Ytong partition wall element NL (EPD in ÖKOBAUDAT); FR: Xella France plants -> at least 3 of 5,,,2026-11-19
+batch_4,aac,A4 · T3,,,,https://www.sentinel-holding.eu/Kunden/Xella%20Deutschland%20GmbH/zertifikat-12050-10-1021-en.pdf ; https://www.bft-international.com/en/artikel/artikel_en_1284443.html ; https://www.oekobaudat.de/OEKOBAU.DAT/datasetdetail/process.xhtml?lang=en&uuid=75d70011-b0c7-46b1-9fa2-4d9cdbdf8c1a,,,2026-11-19
+batch_4,aac,A4 · T2,(archetype),national,lorry 150 km = 0.15 tkm,TRANSPORT · NATIONAL,https://milieudatabase.nl/media/filer_public/08/97/08978af7-15a0-4412-a782-28aee7a91b83/bepalingsmethode-milieuprestatie-bouwwerken-juli-2020.pdf,,2026-11-19
+batch_4,aac,A5 · I1,no,20,kg per piece,"typical block 625 x 250 x 300 mm (assumed typical) x 428 kg/m3 (EPD density) = 20 kg, under 50 kg; laid by hand",https://www.oekobaudat.de/OEKOBAU.DAT/datasetdetail/process.xhtml?lang=en&uuid=e6819670-eb6c-4104-adea-f7f8bb2f49e6,,2026-11-19
+batch_4,aac,A5 · L1,yes,,,"masonry laid from small units with (thin-bed) mortar on site -> in situ, 5 % (NMD example: masonry laid with mortar)",https://milieudatabase.nl/media/filer_public/08/97/08978af7-15a0-4412-a782-28aee7a91b83/bepalingsmethode-milieuprestatie-bouwwerken-juli-2020.pdf,,2026-11-19
+batch_4,aac,A5 · LOSS,0.0526,kg lost per kg installed,,0.05/0.95,https://milieudatabase.nl/media/filer_public/08/97/08978af7-15a0-4412-a782-28aee7a91b83/bepalingsmethode-milieuprestatie-bouwwerken-juli-2020.pdf,,2026-11-19
+batch_4,aac,C1 · X1,yes,,,"bonded with thin-bed mortar -> demolished by machine, diesel 0.036 MJ/kg",,,2026-11-19
+batch_4,aac,C2 · ROUTE,9 aerated concrete,,landfill 1 / incineration 0 / recycling 99 / reuse 0 %,"sheet nmd_eol, row for 'AAC'",,https://milieudatabase.nl/en/downloads/download/appendix-default-values-for-end-of-life-processing-scenarios/,2026-11-19
+batch_4,aac,C2 · TKM,,0.0500,tkm per kg,all routes 50 km,,,2026-11-19
+batch_4,aac,W1: AAC block × landfill,no,,,"no waste AAC / aerated concrete treatment dataset (searched 'waste aerated', 'aerated'); the product itself is the waste material; -> W2",,,2026-11-19
+batch_4,aac,W2: AAC block × landfill,dataset,,,"treatment of inert waste, inert material landfill (CH); class Mineral chosen as AAC is listed in Mineral, Gypsum and Metal rows (main constituent sand)",,,2026-11-19
+batch_4,aac,W1: AAC block × recycling,no,,,"no waste AAC / aerated concrete treatment dataset (searched 'waste aerated', 'aerated'); the product itself is the waste material; -> W2",,,2026-11-19
+batch_4,aac,W2: AAC block × recycling,dataset,,,"treatment of waste reinforced concrete, recycling (Europe w/o CH); class Mineral chosen as AAC is listed in Mineral, Gypsum and Metal rows (main constituent sand)",,,2026-11-19
+batch_4,aac,D · CFF · F1,"Mineral, crushed to aggregate",,,sheet cff_archetypes,,,2026-11-19
+batch_4,aac,D · BIO-C · B1: quartz sand,Non-biogenic,,,sheet carbon_archetypes,,,2026-11-19
+batch_4,aac,D · BIO-C · B1: cement,Non-biogenic,,,sheet carbon_archetypes,,,2026-11-19
+batch_4,aac,D · BIO-C · B1: quicklime,Non-biogenic,,,sheet carbon_archetypes,,,2026-11-19
+batch_4,aac,D · BIO-C · B1: anhydrite / gypsum,Non-biogenic,,,sheet carbon_archetypes,,,2026-11-19
+batch_4,aac,D · BIO-C · B1: aluminium paste,Non-biogenic,,,sheet carbon_archetypes,,,2026-11-19
+batch_4,mycelium,D1,no,,,"no mycelium / fungal composite or mushroom-based product in ecoinvent 3.12 cut-off (searched 'mycelium', 'mushroom', 'spawn')",,mycelium; mushroom; spawn,2026-11-19
+batch_4,mycelium,D1b,no,,,no product with the same name and state; test cannot be passed -> build from scratch,,mycelium,2026-11-19
+batch_4,mycelium,A4 · T1,no,,,delivered as panels,https://milieudatabase.nl/media/filer_public/08/97/08978af7-15a0-4412-a782-28aee7a91b83/bepalingsmethode-milieuprestatie-bouwwerken-juli-2020.pdf,,2026-11-19
+batch_4,mycelium,A4 · T2,no,,,no manufacturer found in DE/FR/IT/ES; NL listing unverified; <3 of 5 (searched mycelium panel manufacturers),https://circulareconomy.europa.eu/platform/en/good-practices/biomyc-developing-tailored-products-mycelium-composite,,2026-11-19
+batch_4,mycelium,A4 · T3,yes,,,"Europe: C-biotech and PermaFungi (Belgium), Myceen (Estonia), Biohm (UK) make mycelium panels -> EU manufactured: lorry 1,500 km + sea 100 km",https://biofuelsdigest.com/c-biotech-unveils-hemp-and-mycelium-construction-panels/ ; https://api.brusselstimes.com/brussels/235401/brussels-company-uses-food-waste-to-create-fungi-insulation/,,2026-11-19
+batch_4,mycelium,D5: hemp hurd / fibre substrate (dry),yes,"market for hemp hurd, FR",,ecoinvent has hemp hurd (FR only),,hemp; hemp hurd,2026-11-19
+batch_4,mycelium,D2: hemp hurd / fibre substrate (dry),yes,market,,market for hemp hurd exists,,,2026-11-19
+batch_4,mycelium,D3: hemp hurd / fibre substrate (dry),FR,,,no European market group/RER/Europe w/o CH/DE; FR is the first country in the order,,,2026-11-19
+batch_4,mycelium,D5: wheat flour (nutrient),yes,"market for wheat flour, RoW",,"ecoinvent wheat flour markets: RoW, ZA",,wheat; market for wheat flour,2026-11-19
+batch_4,mycelium,D3: wheat flour (nutrient),RoW,,,no European/GLO market; RoW precedes 'other' (ZA),,,2026-11-19
+batch_4,mycelium,D5: grain spawn,no,"proxy: market for rye grain, CH",,"no spawn dataset; rye grain is a common spawn grain (millet also exists, GLO); proxy flagged TeR 4",,spawn; mushroom; rye; millet,2026-11-19
+batch_4,mycelium,D3: grain spawn,CH,,,CH single European country before RoW,,,2026-11-19
+batch_4,mycelium,CHECK,yes,1.000,kg,hurd 0.85 + flour 0.05 + spawn 0.10 = 1.00 = input,,,2026-11-19
+batch_4,mycelium,P1: pasteurising substrate,machine,Rootlab 150 L electric autoclave,kWh/kg,0.107 kWh/kg (6 kW x 0.75 h / 42 kg); fewer than 3 complete datasheets (Hokken GXMQ lacks cycle time and mass; Consteril lacks power); craft/commercial scale -> proxy TeR 4,https://www.rootlab.com.au/product/autoclave-150-liters-vertical/,,2026-11-19
+batch_4,mycelium,P2: pasteurising substrate,unclear,,kg,machine mass not on any datasheet found -> no wear row (lower-impact branch),,,2026-11-19
+batch_4,mycelium,P1: inoculation and mixing,machine,Magaldi Mixer 700 (median of 500/700/900),kWh/kg,9.778e-04 kWh/kg; all three candidates from one manufacturer (Hokken ST-M350 lacks weight and throughput),https://www.magaldi.com/en/applications/paddle-mixer,,2026-11-19
+batch_4,mycelium,P2: inoculation and mixing,machine,Magaldi Mixer 700,kg per kg processed,6.356e-06,https://www.magaldi.com/en/applications/paddle-mixer,,2026-11-19
+batch_4,mycelium,P1: incubation,unclear,,,incubation is held in a climate-controlled room; no machine datasheet with power and throughput found (only laboratory incubators) -> no rows (lower-impact branch),,,2026-11-19
+batch_4,mycelium,P2: incubation,unclear,,,no P1 rows -> no machine row,,,2026-11-19
+batch_4,mycelium,P1: moulding,unclear,,,no press/moulding datasheet found with power AND throughput (cycle time) for panel moulding -> no rows (lower-impact branch),,,2026-11-19
+batch_4,mycelium,P2: moulding,unclear,,,no P1 rows -> no machine row,,,2026-11-19
+batch_4,mycelium,P1: heat deactivation and drying,machine,"STELA WT-HS 830/100 belt dryer (median of Sulzle, STELA 830, STELA 3870)",kWh/kg,"heat 1.220 kWh/kg, electricity 0.0122 kWh/kg; kg of water evaporated used as kg processed; values from a search summary of the brochure, PDF not readable -> proxy TeR 4",https://www.messe.de/apollo/ligna_2019/obs/Binary/A922945/922945_01820801.pdf,,2026-11-19
+batch_4,mycelium,P2: heat deactivation and drying,unclear,,,dryer mass not found -> no wear row,,,2026-11-19
+batch_4,mycelium,CHECK 3,no check possible,,,no EN 15804+A2 EPD for mycelium panels in ÖKOBAUDAT (searched name and classification),,,2026-11-19
+batch_4,mycelium,A5 · I1,no,5.4,kg per piece,typical panel 1200 x 600 x 50 mm at ~150 kg/m3 = 5.4 kg (assumption; composites ~100-200 kg/m3),https://materialdistrict.com/material/mycelium-composite-panel/,,2026-11-19
+batch_4,mycelium,A5 · L1,no,,,prefab panels fixed dry -> 3 %,https://milieudatabase.nl/media/filer_public/08/97/08978af7-15a0-4412-a782-28aee7a91b83/bepalingsmethode-milieuprestatie-bouwwerken-juli-2020.pdf,,2026-11-19
+batch_4,mycelium,A5 · LOSS,0.0309,kg lost per kg installed,,0.03/0.97,https://milieudatabase.nl/media/filer_public/08/97/08978af7-15a0-4412-a782-28aee7a91b83/bepalingsmethode-milieuprestatie-bouwwerken-juli-2020.pdf,,2026-11-19
+batch_4,mycelium,C1 · X1,no,5.4,kg per piece,"mechanically fixed panels under 50 kg, by hand",,,2026-11-19
+batch_4,mycelium,C2 · ROUTE,"52 organic / bio-based, other",,landfill 5 / incineration 95 / recycling 0 / reuse 0 %,"sheet nmd_eol, row for 'mycelium'",,https://milieudatabase.nl/en/downloads/download/appendix-default-values-for-end-of-life-processing-scenarios/,2026-11-19
+batch_4,mycelium,C2 · TKM,,0.0975,tkm per kg,0.05x50 + 0.95x100 km / 1000,,,2026-11-19
+batch_4,mycelium,W1: hemp hurd / fibre substrate (dry) × landfill,no,,,no waste dataset for this plant constituent; -> W2 class Other plant-based = as wood,,,2026-11-19
+batch_4,mycelium,W2: hemp hurd / fibre substrate (dry) × landfill,dataset,,,"treatment of waste wood, untreated, sanitary landfill (CH)",,,2026-11-19
+batch_4,mycelium,W1: hemp hurd / fibre substrate (dry) × incineration,no,,,no waste dataset for this plant constituent; -> W2 class Other plant-based = as wood,,,2026-11-19
+batch_4,mycelium,W2: hemp hurd / fibre substrate (dry) × incineration,dataset,,,"treatment of waste wood, untreated, municipal incineration (GLO)",,,2026-11-19
+batch_4,mycelium,W1: wheat flour (nutrient) × landfill,no,,,no waste dataset for this plant constituent; -> W2 class Other plant-based = as wood,,,2026-11-19
+batch_4,mycelium,W2: wheat flour (nutrient) × landfill,dataset,,,"treatment of waste wood, untreated, sanitary landfill (CH)",,,2026-11-19
+batch_4,mycelium,W1: wheat flour (nutrient) × incineration,no,,,no waste dataset for this plant constituent; -> W2 class Other plant-based = as wood,,,2026-11-19
+batch_4,mycelium,W2: wheat flour (nutrient) × incineration,dataset,,,"treatment of waste wood, untreated, municipal incineration (GLO)",,,2026-11-19
+batch_4,mycelium,W1: grain spawn × landfill,no,,,no waste dataset for this plant constituent; -> W2 class Other plant-based = as wood,,,2026-11-19
+batch_4,mycelium,W2: grain spawn × landfill,dataset,,,"treatment of waste wood, untreated, sanitary landfill (CH)",,,2026-11-19
+batch_4,mycelium,W1: grain spawn × incineration,no,,,no waste dataset for this plant constituent; -> W2 class Other plant-based = as wood,,,2026-11-19
+batch_4,mycelium,W2: grain spawn × incineration,dataset,,,"treatment of waste wood, untreated, municipal incineration (GLO)",,,2026-11-19
+batch_4,mycelium,D · CFF · F1,Other plant-based,,,sheet cff_archetypes,,,2026-11-19
+batch_4,mycelium,D · BIO-C · B1: hemp hurd / fibre substrate (dry),Cellulose fibres and stalks,,,sheet carbon_archetypes,,,2026-11-19
+batch_4,mycelium,D · BIO-C · B1: wheat flour (nutrient),Cellulose fibres and stalks,,,sheet carbon_archetypes,,,2026-11-19
+batch_4,mycelium,D · BIO-C · B1: grain spawn,Mycelium,,,sheet carbon_archetypes,,,2026-11-19
+batch_4,concrete,D1,no,,,"ecoinvent concrete 30MPa AT (market) also contains ground granulated blast furnace slag (~1 %), limestone filler and an organic admixture (~0.07 %), none listed in the input (aggregates, cement, water) -> extra constituents -> not an exact match (strict reading)",,concrete; market for concrete,2026-11-19
+batch_4,concrete,D1b,yes,"market for concrete, 30MPa, AT",,same product (ready-mix concrete) and state; main constituent aggregates (gravel+sand ~81 % vs 76.9 %); differences logged,,,2026-11-19
+batch_4,concrete,D2,yes,market,,market for concrete exists,,,2026-11-19
+batch_4,concrete,D3,AT,,,"no European market group, RER, Europe w/o CH, DE, FR, IT, ES, NL market for concrete; AT is the first in the country list",,,2026-11-19
+batch_4,concrete,D4,30MPa,,,"variant matching C30/37 (30 MPa); alternatives: normal strength AT, 25MPa AT",,,2026-11-19
+batch_4,concrete,CHECK 2,no,0.118,kg CO2e/kg,"ours 0.1180 vs median 0.0728 of 63 C30/37 EPDs, ratio 1.62 > 1.5 -> build from scratch",,,2026-11-19
+batch_4,concrete,D5: aggregates,no,"proxy: market for gravel, crushed, CH",,no 'aggregates' product; ecoinvent concrete uses gravel and sand; TeR 4,,aggregate; gravel; sand,2026-11-19
+batch_4,concrete,D3: aggregates,CH,,,only European gravel market is CH,,,2026-11-19
+batch_4,concrete,D5: cement,yes,"market for cement, unspecified, Europe without Switzerland",,,,market for cement,2026-11-19
+batch_4,concrete,D3: cement,Europe without Switzerland,,,European market (rule 1/3),,,2026-11-19
+batch_4,concrete,D5: water,yes,"market group for tap water, RER",,,,market for tap water,2026-11-19
+batch_4,concrete,D3: water,RER,,,European market group RER,,,2026-11-19
+batch_4,concrete,CHECK,yes,1.001,kg,0.769+0.145+0.087 = 1.001 = input sum,,,2026-11-19
+batch_4,concrete,P1: mixing,machine,"Sicoma MAO3000/2000 (median of Sicoma, MEKA MB-T 2,0, Liebherr DW 4.5)",kWh/kg,3.776e-04 kWh/kg; MEKA and Liebherr datasheets give no cycle time (90 s from Sicoma borrowed),https://catalog.jamiesonequipment.com/item/all-products-sicoma-mixers/gories-twin-shaft-mixers-twin-shaft-concrete-mixer/mao3000-2000,,2026-11-19
+batch_4,concrete,P2: mixing,machine,Sicoma MAO3000/2000,kg per kg processed,9.531e-07,https://www.bundesfinanzministerium.de/Content/DE/Standardartikel/Themen/Steuern/Weitere_Steuerthemen/Betriebspruefung/AfA-Tabellen/AfA-Tabelle_Baugewerbe.html,,2026-11-19
+batch_4,concrete,CHECK 3,no,0.118,kg CO2e/kg,"ours 0.1180 vs median 0.0728, ratio 1.62 > 1.5",,,2026-11-19
+batch_4,concrete,REVIEW,"keep built LCI, flagged",0.118,kg CO2e/kg,"approximate 1.621x (distance 0.621), built 1.620x (distance 0.620); built is closer and lower; exact match not tried (D1 no)",,,2026-11-19
+batch_4,concrete,A4 · T1,yes,,,"ready-mixed concrete delivered by truck, bulk -> 50 km",https://milieudatabase.nl/media/filer_public/08/97/08978af7-15a0-4412-a782-28aee7a91b83/bepalingsmethode-milieuprestatie-bouwwerken-juli-2020.pdf,,2026-11-19
+batch_4,concrete,A5 · I1,yes,,,poured or pumped on site; diesel 0.015 MJ/kg,,,2026-11-19
+batch_4,concrete,A5 · L1,yes,,,cast in situ -> 5 %,https://milieudatabase.nl/media/filer_public/08/97/08978af7-15a0-4412-a782-28aee7a91b83/bepalingsmethode-milieuprestatie-bouwwerken-juli-2020.pdf,,2026-11-19
+batch_4,concrete,A5 · LOSS,0.0526,kg lost per kg installed,,0.05/0.95,https://milieudatabase.nl/media/filer_public/08/97/08978af7-15a0-4412-a782-28aee7a91b83/bepalingsmethode-milieuprestatie-bouwwerken-juli-2020.pdf,,2026-11-19
+batch_4,concrete,C1 · X1,yes,,,"cast in place -> demolished by machine, diesel 0.036 MJ/kg",,,2026-11-19
+batch_4,concrete,C2 · ROUTE,"8 concrete, masonry, reinforced concrete",,landfill 1 / incineration 0 / recycling 99 / reuse 0 %,"sheet nmd_eol, row for 'concrete'",,https://milieudatabase.nl/en/downloads/download/appendix-default-values-for-end-of-life-processing-scenarios/,2026-11-19
+batch_4,concrete,C2 · TKM,,0.0500,tkm per kg,all routes 50 km,,,2026-11-19
+batch_4,concrete,W1: aggregates × landfill,no,,,no landfill-route dataset named for this constituent; -> W2 class Mineral,,,2026-11-19
+batch_4,concrete,W2: aggregates × landfill,dataset,,,"treatment of inert waste, inert material landfill (CH)",,,2026-11-19
+batch_4,concrete,W1: aggregates × recycling,no,,,no waste dataset for this constituent -> W2,,,2026-11-19
+batch_4,concrete,W2: aggregates × recycling,dataset,,,"treatment of waste reinforced concrete, recycling (Europe w/o CH)",,,2026-11-19
+batch_4,concrete,W1: cement × landfill,no,,,no landfill-route dataset named for this constituent; -> W2 class Mineral,,,2026-11-19
+batch_4,concrete,W2: cement × landfill,dataset,,,"treatment of inert waste, inert material landfill (CH)",,,2026-11-19
+batch_4,concrete,W1: cement × recycling,yes,,,"treatment of waste cement in concrete and mortar, sorting plant (Europe w/o CH)",,,2026-11-19
+batch_4,concrete,W1: water × landfill,no,,,no landfill-route dataset named for this constituent; -> W2 class Mineral,,,2026-11-19
+batch_4,concrete,W2: water × landfill,dataset,,,"treatment of inert waste, inert material landfill (CH)",,,2026-11-19
+batch_4,concrete,W1: water × recycling,no,,,no waste dataset for this constituent -> W2,,,2026-11-19
+batch_4,concrete,W2: water × recycling,dataset,,,"treatment of waste reinforced concrete, recycling (Europe w/o CH)",,,2026-11-19
+batch_4,concrete,D · CFF · F1,"Mineral, crushed to aggregate",,,sheet cff_archetypes,,,2026-11-19
+batch_4,concrete,D · BIO-C · B1: aggregates,Non-biogenic,,,sheet carbon_archetypes,,,2026-11-19
+batch_4,concrete,D · BIO-C · B1: cement,Non-biogenic,,,sheet carbon_archetypes,,,2026-11-19
+batch_4,concrete,D · BIO-C · B1: water,Non-biogenic,,,sheet carbon_archetypes,,,2026-11-19

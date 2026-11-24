@@ -1,0 +1,16 @@
+# system and editor files
+.DS_Store
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.vscode/
+.claude/
+
+# environment and keys
+.env
+
+# Excel lock files
+~$*
+
+# third-party documents the protocol agents downloaded (kept locally, not published)
+02_docs/lci_protocol/**/downloads/

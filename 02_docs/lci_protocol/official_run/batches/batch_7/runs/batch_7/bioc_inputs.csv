@@ -1,0 +1,10 @@
+run_id,material_id,constituent,kg_per_kg_product,carbon_archetype,moisture_content,flag,note
+batch_7,glulam,"softwood lamellas, incl. moisture",0.984,Wood,0.1323,,moisture = 11.5 % water / 86.9 % atro from the input note
+batch_7,glulam,"adhesive, PUR/MUF",0.016,Non-biogenic,,,
+batch_7,clt,"softwood lamellas, incl. moisture",0.99,Wood,0.1212,,moisture = 10.70 % water / 88.28 % atro from the input note
+batch_7,clt,"adhesive, 1-K PUR",0.0099,Non-biogenic,,,
+batch_7,clt,"adhesive, MUF",0.0003,Non-biogenic,,,
+batch_7,soft_wood_fibre_board,softwood fibres (fir/spruce),0.945,Wood,,,"moisture not given in the input, archetype default is used"
+batch_7,soft_wood_fibre_board,PUR resin,0.04,Non-biogenic,,,
+batch_7,soft_wood_fibre_board,paraffin,0.015,Non-biogenic,,,
+batch_7,aluminium_extrusion,aluminium alloy EN AW-6060,1.0,Non-biogenic,,,

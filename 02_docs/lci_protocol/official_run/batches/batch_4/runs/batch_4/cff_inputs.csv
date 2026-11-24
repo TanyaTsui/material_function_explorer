@@ -1,0 +1,5 @@
+run_id,material_id,cff_archetype,recycling_share,reuse_share,incineration_share,landfill_share,flag,note
+batch_4,plywood,Wood panels,0.1,0,0.85,0.05,,from sheets cff_archetypes and nmd_eol
+batch_4,aac,"Mineral, crushed to aggregate",0.99,0,0,0.01,,from sheets cff_archetypes and nmd_eol
+batch_4,mycelium,Other plant-based,0,0,0.95,0.05,,from sheets cff_archetypes and nmd_eol
+batch_4,concrete,"Mineral, crushed to aggregate",0.99,0,0,0.01,flagged: low data quality (REVIEW),from sheets cff_archetypes and nmd_eol

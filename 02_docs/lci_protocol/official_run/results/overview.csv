@@ -1,0 +1,29 @@
+batch,material_id,material,lci_file,outcome,route_kept,ratio_to_median,flagged
+batch_1,sawn_softwood,sawn softwood,kept existing (use --force),passed,exact,0.698,no
+batch_1,cork,cork,kept existing (use --force),"all checks failed, review",approximate,1.87,yes
+batch_1,fibre_cement,fibre cement,kept existing (use --force),passed,approximate,1.29,no
+batch_1,stone_wool,stone wool,kept existing (use --force),passed,built,1.14,no
+batch_2,sawn_hardwood_oak,sawn hardwood (oak),copied,passed,exact,0.953,no
+batch_2,cotton_canvas,cotton canvas,copied,no check possible,built,,no
+batch_2,ceramic_tile,ceramic tile,copied,passed,approximate,0.623,no
+batch_2,pvc_u,PVC-U,copied,passed,built,0.574,no
+batch_3,engineered_bamboo,engineered bamboo,copied,no check possible,built,,no
+batch_3,osb3,OSB/3,copied,passed,exact,0.891,no
+batch_3,hemp_fibre_mat,hemp fibre mat,copied,passed,built,1.33,no
+batch_3,straw_bale,straw bale,copied,"all checks failed, review",built,0.435,yes
+batch_4,plywood,plywood,copied,passed,exact,1.22,no
+batch_4,mycelium,mycelium,copied,no check possible,built,,no
+batch_4,aac,AAC,copied,passed,approximate,0.779,no
+batch_4,concrete,concrete,copied,"all checks failed, review",built,1.62,yes
+batch_5,hempcrete,hempcrete,copied,no check possible,built,,no
+batch_5,gypsum_board,gypsum board,copied,"all checks failed, review",built (flagged),approx 2.29; built 2.24,yes
+batch_5,toughened_glass,toughened glass,copied,"all checks failed, review",built (flagged),built 0.40,yes
+batch_5,ptfe_coated_glass_fabric,PTFE-coated glass fabric,copied,no check possible,built,,no
+batch_6,mdf,MDF,copied,"all checks failed, review",built,,yes
+batch_6,clay_brick_masonry,clay brick masonry,copied,"all checks failed, review",built,1.58,yes
+batch_6,structural_steel,structural steel,copied,passed,built,1.36,no
+batch_6,pvc_coated_polyester,PVC-coated polyester,copied,passed,built,0.834,no
+batch_7,glulam,glulam,copied,passed,exact,1.17,no
+batch_7,clt,CLT,copied,passed,exact,1.44,no
+batch_7,soft_wood_fibre_board,soft wood fibre board,copied,"all checks failed, review",built,approximate 1.704; built 1.701,yes
+batch_7,aluminium_extrusion,aluminium extrusion,copied,"all checks failed, review",built,built 3.105,yes

@@ -1,0 +1,14 @@
+run_id,material_id,constituent,kg_per_kg_product,carbon_archetype,moisture_content,flag,note
+batch_2,sawn_hardwood_oak,"oak timber, incl. 12 % moisture",1,Wood,0.12,,input gives u = 12 %
+batch_2,cotton_canvas,cotton fibre,1.0,Cellulose fibres and stalks,,,1.1 kg in input incl. 10 % loss; losses excluded: 1 kg ends up in the product
+batch_2,ceramic_tile,clays,0.556,Non-biogenic,,,
+batch_2,ceramic_tile,feldspar,0.265,Non-biogenic,,,
+batch_2,ceramic_tile,kaolin,0.074,Non-biogenic,,,
+batch_2,ceramic_tile,limestone,0.032,Non-biogenic,,,
+batch_2,ceramic_tile,sand,0.032,Non-biogenic,,,
+batch_2,ceramic_tile,glaze,0.042,Non-biogenic,,,
+batch_2,pvc_u,PVC resin,0.81,Non-biogenic,,,
+batch_2,pvc_u,chalk filler,0.081,Non-biogenic,,,
+batch_2,pvc_u,impact modifier (acrylate),0.049,Non-biogenic,,,
+batch_2,pvc_u,Ca-Zn stabiliser,0.028,Non-biogenic,,,
+batch_2,pvc_u,TiO2 pigment,0.032,Non-biogenic,,,

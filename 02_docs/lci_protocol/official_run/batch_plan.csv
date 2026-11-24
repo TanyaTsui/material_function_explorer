@@ -1,0 +1,29 @@
+batch,material_id,material,constituents,steps,target_file
+batch_1,sawn_softwood,sawn softwood,1,3,data/LCI/baseline_sawn_softwood.xlsx
+batch_1,cork,cork,1,4,data/LCI/baseline_cork.xlsx
+batch_1,fibre_cement,fibre cement,6,6,data/LCI/baseline_fibre_cement.xlsx
+batch_1,stone_wool,stone wool,4,4,data/LCI/baseline_stone_wool.xlsx
+batch_2,sawn_hardwood_oak,sawn hardwood (oak),1,3,data/LCI/baseline_sawn_hardwood_oak.xlsx
+batch_2,cotton_canvas,cotton canvas,1,4,data/LCI/baseline_cotton_canvas.xlsx
+batch_2,ceramic_tile,ceramic tile,6,6,data/LCI/baseline_ceramic_tile.xlsx
+batch_2,pvc_u,PVC-U,5,3,data/LCI/baseline_pvc_u.xlsx
+batch_3,engineered_bamboo,engineered bamboo,2,5,data/LCI/baseline_engineered_bamboo.xlsx
+batch_3,osb3,OSB/3,3,7,data/LCI/baseline_osb3.xlsx
+batch_3,hemp_fibre_mat,hemp fibre mat,3,5,data/LCI/baseline_hemp_fibre_mat.xlsx
+batch_3,straw_bale,straw bale,2,2,data/LCI/baseline_straw_bale.xlsx
+batch_4,plywood,plywood,2,5,data/LCI/baseline_plywood.xlsx
+batch_4,mycelium,mycelium,3,5,data/LCI/baseline_mycelium.xlsx
+batch_4,aac,AAC,5,5,data/LCI/baseline_aac.xlsx
+batch_4,concrete,concrete,3,1,data/LCI/baseline_concrete.xlsx
+batch_5,hempcrete,hempcrete,4,3,data/LCI/baseline_hempcrete.xlsx
+batch_5,gypsum_board,gypsum board,3,5,data/LCI/baseline_gypsum_board.xlsx
+batch_5,toughened_glass,toughened glass,6,4,data/LCI/baseline_toughened_glass.xlsx
+batch_5,ptfe_coated_glass_fabric,PTFE-coated glass fabric,2,2,data/LCI/baseline_ptfe_coated_glass_fabric.xlsx
+batch_6,mdf,MDF,3,6,data/LCI/baseline_mdf.xlsx
+batch_6,clay_brick_masonry,clay brick masonry,2,5,data/LCI/baseline_clay_brick_masonry.xlsx
+batch_6,structural_steel,structural steel,1,2,data/LCI/baseline_structural_steel.xlsx
+batch_6,pvc_coated_polyester,PVC-coated polyester,5,4,data/LCI/baseline_pvc_coated_polyester.xlsx
+batch_7,glulam,glulam,2,6,data/LCI/baseline_glulam.xlsx
+batch_7,clt,CLT,3,4,data/LCI/baseline_clt.xlsx
+batch_7,soft_wood_fibre_board,soft wood fibre board,3,6,data/LCI/baseline_soft_wood_fibre_board.xlsx
+batch_7,aluminium_extrusion,aluminium extrusion,1,4,data/LCI/baseline_aluminium_extrusion.xlsx

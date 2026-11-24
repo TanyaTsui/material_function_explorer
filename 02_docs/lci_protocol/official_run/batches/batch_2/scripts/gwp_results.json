@@ -1,0 +1,43 @@
+{
+ "sawn_hardwood_oak": [
+  0.13276036538303737,
+  0.0,
+  {
+   "finished product": 0.13276036538303737
+  }
+ ],
+ "cotton_canvas": [
+  5.872969117212609,
+  0.00014484590547330246,
+  {
+   "constituent: cotton fibre": 3.8077862501051394,
+   "processing: opening and carding (electricity)": 0.042785745065124524,
+   "machine: opening and carding": 0.000850675529599402,
+   "processing: spinning (electricity)": 0.7687520044612852,
+   "processing: weaving (electricity)": 1.113125073748509,
+   "processing: wet finishing and drying (heat)": 0.139669368302951
+  }
+ ],
+ "ceramic_tile": [
+  0.43240597890017946,
+  0.0,
+  {
+   "finished product (approximate)": 0.40981338355047064,
+   "A2 transport": 0.022592595349708807
+  }
+ ],
+ "pvc_u": [
+  2.400517218785324,
+  0.00019558797847017253,
+  {
+   "constituent: PVC resin": 1.747030482469341,
+   "constituent: chalk filler": 0.002011900522844147,
+   "constituent: impact modifier (acrylate)": 0.29251488707373,
+   "constituent: Ca-Zn stabiliser": 0.10803348771828022,
+   "constituent: TiO2 pigment": 0.1579284268285439,
+   "processing: dry blending (electricity)": 0.03269804907243908,
+   "processing: profile extrusion (electricity)": 0.05983047279004025,
+   "machine: profile extrusion": 0.00046951231010506234
+  }
+ ]
+}

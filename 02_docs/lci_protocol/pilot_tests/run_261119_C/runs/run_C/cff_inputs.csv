@@ -1,0 +1,4 @@
+run_id,material_id,cff_archetype,recycling_share,reuse_share,incineration_share,landfill_share,flag,note
+run_C,osb3,Wood panels,0.1,0,0.85,0.05,,"Key: sheet cff_archetypes, row 'plywood, OSB/3, MDF, soft wood fibre board'; shares from nmd_eol category 55"
+run_C,hempcrete,"Mineral, crushed to aggregate",0.99,0,0,0.01,,Key: cff_archetypes row lists hempcrete; shares from nmd_eol category 8
+run_C,cork,Other plant-based,0,0,0.95,0.05,flagged in epd_check (CHECK 3 failed),Key: cff_archetypes row lists cork; shares from nmd_eol category 52

@@ -1,0 +1,5 @@
+run_id,material_id,cff_archetype,recycling_share,reuse_share,incineration_share,landfill_share,flag,note
+batch_1,sawn_softwood,Solid wood,0.1,0.05,0.8,0.05,,NMD category 34; sheet cff_archetypes
+batch_1,cork,Other plant-based,0,0,0.95,0.05,REVIEW-flagged (approximate match kept),NMD category 52
+batch_1,fibre_cement,"Mineral, crushed to aggregate",0.99,0,0,0.01,,NMD category 8 (closest)
+batch_1,stone_wool,Mineral wool,0.1,0,0.05,0.85,built with proxies and BREF energy,NMD category 78

@@ -1,0 +1,16 @@
+run_id,material_id,constituent,kg_per_kg_product,carbon_archetype,moisture_content,flag,note
+batch_5,hempcrete,hemp shiv,0.342,Cellulose fibres and stalks,,,water listed as its own constituent; archetype default moisture would double count: model should not add moisture to hemp shiv
+batch_5,hempcrete,air lime,0.108,Non-biogenic,,,
+batch_5,hempcrete,natural hydraulic lime,0.422,Non-biogenic,,,
+batch_5,hempcrete,water,0.128,Non-biogenic,,,
+batch_5,gypsum_board,"gypsum (calcined, from natural / FGD gypsum)",0.93,Non-biogenic,,,
+batch_5,gypsum_board,recycled paper liner,0.035,Cellulose fibres and stalks,,,
+batch_5,gypsum_board,"mineral additives and chemicals (starch, foaming agent)",0.035,Non-biogenic,,,
+batch_5,toughened_glass,silica sand,0.577,Non-biogenic,,,
+batch_5,toughened_glass,soda ash,0.177,Non-biogenic,,,
+batch_5,toughened_glass,dolomite,0.151,Non-biogenic,,,
+batch_5,toughened_glass,chalk (limestone),0.047,Non-biogenic,,,
+batch_5,toughened_glass,cullet,0.035,Non-biogenic,,,
+batch_5,toughened_glass,sulphate,0.009,Non-biogenic,,,
+batch_5,ptfe_coated_glass_fabric,glass fibre yarn,0.35,Non-biogenic,,,
+batch_5,ptfe_coated_glass_fabric,PTFE dispersion (solids),0.65,Non-biogenic,,,

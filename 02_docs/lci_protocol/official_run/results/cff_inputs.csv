@@ -1,0 +1,29 @@
+run_id,material_id,cff_archetype,recycling_share,reuse_share,incineration_share,landfill_share,flag,note
+batch_1,sawn_softwood,Solid wood,0.1,0.05,0.8,0.05,,NMD category 34; sheet cff_archetypes
+batch_1,cork,Other plant-based,0,0,0.95,0.05,REVIEW-flagged (approximate match kept),NMD category 52
+batch_1,fibre_cement,"Mineral, crushed to aggregate",0.99,0,0,0.01,,NMD category 8 (closest)
+batch_1,stone_wool,Mineral wool,0.1,0,0.05,0.85,built with proxies and BREF energy,NMD category 78
+batch_2,sawn_hardwood_oak,Solid wood,0.1,0.05,0.8,0.05,,"NMD category 34 wood, untreated: beams, planks"
+batch_2,cotton_canvas,Other plant-based,0.0,0.0,0.95,0.05,,"NMD category 52 organic / bio-based, other"
+batch_2,ceramic_tile,"Mineral, crushed to aggregate",0.8,0.05,0.0,0.15,,NMD category 25 fine ceramics
+batch_2,pvc_u,PVC,0.8,0.0,0.1,0.1,,NMD category 63 PVC window profiles
+batch_3,osb3,Wood panels,0.1,0.0,0.85,0.05,,
+batch_3,engineered_bamboo,Solid wood,0.1,0.05,0.8,0.05,,
+batch_3,hemp_fibre_mat,Other plant-based,0.0,0.0,0.95,0.05,,
+batch_3,straw_bale,Other plant-based,0.0,0.0,0.95,0.05,,
+batch_4,plywood,Wood panels,0.1,0,0.85,0.05,,from sheets cff_archetypes and nmd_eol
+batch_4,aac,"Mineral, crushed to aggregate",0.99,0,0,0.01,,from sheets cff_archetypes and nmd_eol
+batch_4,mycelium,Other plant-based,0,0,0.95,0.05,,from sheets cff_archetypes and nmd_eol
+batch_4,concrete,"Mineral, crushed to aggregate",0.99,0,0,0.01,flagged: low data quality (REVIEW),from sheets cff_archetypes and nmd_eol
+batch_5,hempcrete,"Mineral, crushed to aggregate",0.99,0.0,0.0,0.01,† closest NMD category (assumption),"NMD category 8 concrete, masonry, reinforced concrete"
+batch_5,gypsum_board,Gypsum,0.05,0.0,0.0,0.95, review flag,NMD category 27 gypsum
+batch_5,toughened_glass,Flat glass,0.7,0.0,0.0,0.3, review flag,NMD category 28 flat glass
+batch_5,ptfe_coated_glass_fabric,Coated fabrics and composites,0.05,0.0,0.85,0.1,† closest NMD category (assumption),"NMD category 62 PVC films, roofing"
+batch_6,mdf,Wood panels,10,0,85,5,flagged (REVIEW),"shares in % of mass, as in sheet nmd_eol (NMD 55 board material, clean); mdf: flagged, see epd_check REVIEW"
+batch_6,clay_brick_masonry,"Mineral, crushed to aggregate",99,0,0,1,flagged (REVIEW),"shares in % of mass, as in sheet nmd_eol (NMD 32 coarse ceramics, masonry); brick: flagged, CHECK 3 failed"
+batch_6,structural_steel,Steel,94,5,0,1,,"shares in % of mass, as in sheet nmd_eol (NMD 70 steel, structural sections)"
+batch_6,pvc_coated_polyester,Coated fabrics and composites,5,0,85,10,,"shares in % of mass, as in sheet nmd_eol (NMD 62 PVC films, roofing)"
+batch_7,glulam,Solid wood,0.1,0.05,0.8,0.05,,shares from C2 (nmd_eol)
+batch_7,clt,Solid wood,0.1,0.05,0.8,0.05,,shares from C2 (nmd_eol)
+batch_7,soft_wood_fibre_board,Wood panels,0.1,0.0,0.85,0.05,"flagged: all checks failed, built LCI kept",shares from C2 (nmd_eol)
+batch_7,aluminium_extrusion,Aluminium,0.94,0.0,0.03,0.03,"flagged: check 3 failed, built LCI kept",shares from C2 (nmd_eol)

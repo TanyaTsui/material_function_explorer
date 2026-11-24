@@ -1,0 +1,12 @@
+archetype,materials,A,R1,Qsin/Qp,Qsout/Qp,LHV (MJ/kg),X heat,X electricity,avoided primary material,avoided energy,B,basis,status
+Solid wood,"sawn softwood, sawn hardwood (oak), glulam, CLT, engineered bamboo",0.8,0.0,1.0,1.0,18.5,0.26,0.15,market for wood chips,avoided electricity; avoided heat,0,"A: wood (pallet) 0.8 in Annex C; LHV 18.5 MJ/kg dry (EGGER MDF EPD); efficiencies 26.1 % heat, 14.5 % electricity (best wood Holzfaser EPD, MSWI)",assumption
+Wood panels,"plywood, OSB/3, MDF, soft wood fibre board",0.8,0.0,1.0,1.0,17.0,0.26,0.15,market for wood chips,avoided electricity; avoided heat,0,as solid wood; LHV lowered for resin: assumption,assumption
+Other plant-based,"cork, hemp fibre mat, mycelium, straw bale, cotton canvas",0.8,0.0,1.0,1.0,16.0,0.26,0.15,,avoided electricity; avoided heat,0,A: textiles default 0.8; LHV assumption,assumption
+"Mineral, crushed to aggregate","hempcrete, clay brick masonry, AAC, fibre cement, ceramic tile, concrete",0.5,0.0,1.0,1.0,0.0,0.0,0.0,market for gravel,,0,A: concrete 0.5 (PEFCR guidance v6.3); Q ratios assumption,assumption
+Gypsum,gypsum board,0.5,0.0,1.0,1.0,0.0,0.0,0.0,market for gypsum,,0,no Annex C default found; mineral value used,assumption
+Flat glass,toughened glass,0.2,0.035,1.0,1.0,0.0,0.0,0.0,market for silica sand,,0,"A: glass 0.2 (Annex C, container glass); R1 = cullet share (BV Flachglas EPD)",assumption
+Mineral wool,stone wool,0.5,0.0,1.0,1.0,0.0,0.0,0.0,market for basalt,,0,no Annex C default found,assumption
+Steel,structural steel,0.2,1.0,1.0,1.0,0.0,0.0,0.0,market for pig iron,,0,"A: metals 0.2; R1 = 1 (sections 100 % scrap, bauforumstahl EPD)",sourced
+Aluminium,aluminium extrusion,0.2,0.75,1.0,1.0,0.0,0.0,0.0,market for primary aluminium,,0,A: metals 0.2; R1 70–80 % scrap (Alu-met billet EPD),sourced
+PVC,PVC-U,0.5,0.0,0.9,0.9,18.0,0.26,0.15,market for PVC,avoided electricity; avoided heat,0,A: plastics 0.5; Q ratios and LHV assumptions,assumption
+Coated fabrics and composites,"PVC-coated polyester, PTFE-coated glass fabric",0.5,0.0,0.5,0.5,20.0,0.26,0.15,,avoided electricity; avoided heat,0,A: plastics 0.5; mostly incinerated (NMD); Q and LHV assumptions,assumption

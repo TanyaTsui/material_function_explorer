@@ -1,0 +1,36 @@
+case_id,cff_archetype,recycling_share,reuse_share,incineration_share,landfill_share,source,flag,note
+baseline_aac,"Mineral, crushed to aggregate",0.99,0.0,0.0,0.01,"baseline LCI protocol, official run (batch_4)",,from sheets cff_archetypes and nmd_eol
+baseline_aluminium_extrusion,Aluminium,0.94,0.0,0.03,0.03,"baseline LCI protocol, official run (batch_7)","flagged: check 3 failed, built LCI kept",shares from C2 (nmd_eol)
+baseline_ceramic_tile,"Mineral, crushed to aggregate",0.8,0.05,0.0,0.15,"baseline LCI protocol, official run (batch_2)",,NMD category 25 fine ceramics
+baseline_clay_brick_masonry,"Mineral, crushed to aggregate",99.0,0.0,0.0,1.0,"baseline LCI protocol, official run (batch_6)",flagged (REVIEW),"shares in % of mass, as in sheet nmd_eol (NMD 32 coarse ceramics, masonry); brick: flagged, CHECK 3 failed"
+baseline_clt,Solid wood,0.1,0.05,0.8,0.05,"baseline LCI protocol, official run (batch_7)",,shares from C2 (nmd_eol)
+baseline_concrete_non_structural,"Mineral, crushed to aggregate",0.99,0.0,0.0,0.01,"baseline LCI protocol, official run (batch_4)",flagged: low data quality (REVIEW),"from sheets cff_archetypes and nmd_eol | copied from 'concrete' of the official run (one concrete there, two LCI files here); check"
+baseline_concrete_reinforced_structural,"Mineral, crushed to aggregate",0.99,0.0,0.0,0.01,"baseline LCI protocol, official run (batch_4)",flagged: low data quality (REVIEW),"from sheets cff_archetypes and nmd_eol | copied from 'concrete' of the official run (one concrete there, two LCI files here); check"
+baseline_cork,Other plant-based,0.0,0.0,0.95,0.05,"baseline LCI protocol, official run (batch_1)",REVIEW-flagged (approximate match kept),NMD category 52
+baseline_cotton_canvas,Other plant-based,0.0,0.0,0.95,0.05,"baseline LCI protocol, official run (batch_2)",,"NMD category 52 organic / bio-based, other"
+baseline_engineered_bamboo,Solid wood,0.1,0.05,0.8,0.05,"baseline LCI protocol, official run (batch_3)",,
+baseline_fibre_cement,"Mineral, crushed to aggregate",0.99,0.0,0.0,0.01,"baseline LCI protocol, official run (batch_1)",,NMD category 8 (closest)
+baseline_glulam,Solid wood,0.1,0.05,0.8,0.05,"baseline LCI protocol, official run (batch_7)",,shares from C2 (nmd_eol)
+baseline_gypsum_board,Gypsum,0.05,0.0,0.0,0.95,"baseline LCI protocol, official run (batch_5)", review flag,NMD category 27 gypsum
+baseline_hemp_fibre_mat,Other plant-based,0.0,0.0,0.95,0.05,"baseline LCI protocol, official run (batch_3)",,
+baseline_hempcrete,"Mineral, crushed to aggregate",0.99,0.0,0.0,0.01,"baseline LCI protocol, official run (batch_5)",† closest NMD category (assumption),"NMD category 8 concrete, masonry, reinforced concrete"
+baseline_mdf,Wood panels,10.0,0.0,85.0,5.0,"baseline LCI protocol, official run (batch_6)",flagged (REVIEW),"shares in % of mass, as in sheet nmd_eol (NMD 55 board material, clean); mdf: flagged, see epd_check REVIEW"
+baseline_mycelium,Other plant-based,0.0,0.0,0.95,0.05,"baseline LCI protocol, official run (batch_4)",,from sheets cff_archetypes and nmd_eol
+baseline_osb3,Wood panels,0.1,0.0,0.85,0.05,"baseline LCI protocol, official run (batch_3)",,
+baseline_plywood,Wood panels,0.1,0.0,0.85,0.05,"baseline LCI protocol, official run (batch_4)",,from sheets cff_archetypes and nmd_eol
+baseline_ptfe_coated_glass_fabric,Coated fabrics and composites,0.05,0.0,0.85,0.1,"baseline LCI protocol, official run (batch_5)",† closest NMD category (assumption),"NMD category 62 PVC films, roofing"
+baseline_pvc_coated_polyester,Coated fabrics and composites,5.0,0.0,85.0,10.0,"baseline LCI protocol, official run (batch_6)",,"shares in % of mass, as in sheet nmd_eol (NMD 62 PVC films, roofing)"
+baseline_pvc_u,PVC,0.8,0.0,0.1,0.1,"baseline LCI protocol, official run (batch_2)",,NMD category 63 PVC window profiles
+baseline_sawn_hardwood_oak,Solid wood,0.1,0.05,0.8,0.05,"baseline LCI protocol, official run (batch_2)",,"NMD category 34 wood, untreated: beams, planks"
+baseline_sawn_softwood,Solid wood,0.1,0.05,0.8,0.05,"baseline LCI protocol, official run (batch_1)",,NMD category 34; sheet cff_archetypes
+baseline_stone_wool,Mineral wool,0.1,0.0,0.05,0.85,"baseline LCI protocol, official run (batch_1)",built with proxies and BREF energy,NMD category 78
+baseline_structural_steel,Steel,94.0,5.0,0.0,1.0,"baseline LCI protocol, official run (batch_6)",,"shares in % of mass, as in sheet nmd_eol (NMD 70 steel, structural sections)"
+baseline_toughened_glass,Flat glass,0.7,0.0,0.0,0.3,"baseline LCI protocol, official run (batch_5)", review flag,NMD category 28 flat glass
+raw_biopol_prototype,Other plant-based,0.0,0.0,0.95,0.05,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",,"closest archetype: bio-based composite of sawdust, seagrass and pea protein; shares as in the LCI"
+raw_biopol_scaled_up,Other plant-based,0.0,0.0,0.95,0.05,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",,"closest archetype: bio-based composite of sawdust, seagrass and pea protein; shares as in the LCI"
+raw_cfw_prototype,Coated fabrics and composites,0.0,0.0,1.0,0.0,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",,flax-epoxy composite; shares as in the LCI
+raw_cfw_scaled_up,Coated fabrics and composites,0.0,0.0,1.0,0.0,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",,flax-epoxy composite; shares as in the LCI
+raw_knit_prototype,Other plant-based,0.0,0.0,0.95,0.05,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",,hemp textile; shares as in the LCI
+raw_knit_scaled_up,Other plant-based,0.0,0.0,0.95,0.05,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",,hemp textile; shares as in the LCI
+raw_timber_prototype,Solid wood,0.1,0.05,0.8,0.05,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",,"NMD category 34, shares as in the LCI's C3–C4 block"
+raw_timber_scaled_up,Solid wood,0.1,0.05,0.8,0.05,"written by hand from the RAW LCI (Claude, 24 Nov 2026); to check",,"NMD category 34, shares as in the LCI's C3–C4 block"

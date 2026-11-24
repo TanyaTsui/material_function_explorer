@@ -1,0 +1,11 @@
+avoided_item,name,reference product,location,unit,note
+market for wood chips,"market for wood chips, wet, measured as dry mass","wood chips, wet, measured as dry mass",RER,kilogram,location chosen by Claude (24 Nov 2026); check with search_ecoinvent.py
+market for gravel,"market for gravel, crushed","gravel, crushed",RoW,kilogram,location chosen by Claude; check
+market for gypsum,"market for gypsum, mineral","gypsum, mineral",RER,kilogram,location chosen by Claude; check
+market for silica sand,market for silica sand,silica sand,GLO,kilogram,location chosen by Claude; check
+market for basalt,market for basalt,basalt,GLO,kilogram,location chosen by Claude; check
+market for pig iron,market for pig iron,pig iron,GLO,kilogram,location chosen by Claude; check
+market for primary aluminium,"market for aluminium, primary, ingot","aluminium, primary, ingot","IAI Area, EU27 & EFTA",kilogram,location chosen by Claude; check
+market for PVC,"market for polyvinylchloride, suspension polymerised","polyvinylchloride, suspension polymerised",RER,kilogram,location chosen by Claude; check
+avoided electricity,"market group for electricity, medium voltage","electricity, medium voltage",RER,kilowatt hour,per kWh; location chosen by Claude; check
+avoided heat,"market group for heat, district or industrial, natural gas","heat, district or industrial, natural gas",RER,megajoule,per MJ; same dataset as the pea protein sheet uses; location chosen by Claude; check

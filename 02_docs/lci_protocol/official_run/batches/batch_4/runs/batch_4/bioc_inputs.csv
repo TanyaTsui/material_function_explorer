@@ -1,0 +1,14 @@
+run_id,material_id,constituent,kg_per_kg_product,carbon_archetype,moisture_content,flag,note
+batch_4,plywood,"beech veneer, incl. moisture",0.922,Wood,0.0796,,moisture from input note: water 6.8 % / atro 85.4 % = 0.0796 (dry basis)
+batch_4,plywood,"adhesive and coating, PF/UF/MUF",0.077,Non-biogenic,,,
+batch_4,mycelium,hemp hurd / fibre substrate (dry),0.85,Cellulose fibres and stalks,,,input says dry; archetype default moisture not applied by us
+batch_4,mycelium,wheat flour (nutrient),0.05,Cellulose fibres and stalks,,,
+batch_4,mycelium,grain spawn,0.1,Mycelium,,,
+batch_4,aac,quartz sand,0.594,Non-biogenic,,,
+batch_4,aac,cement,0.223,Non-biogenic,,,
+batch_4,aac,quicklime,0.148,Non-biogenic,,,
+batch_4,aac,anhydrite / gypsum,0.035,Non-biogenic,,,
+batch_4,aac,aluminium paste,0.0007,Non-biogenic,,,
+batch_4,concrete,aggregates,0.769,Non-biogenic,,,
+batch_4,concrete,cement,0.145,Non-biogenic,,,
+batch_4,concrete,water,0.087,Non-biogenic,,,

@@ -1,0 +1,12 @@
+run_id,material_id,constituent,kg_per_kg_product,carbon_archetype,moisture_content,flag,note
+batch_6,mdf,"wood fibres, incl. moisture",0.88,Wood,0.073,,moisture derived from note: water about 6 % / wood about 82 % = 0.073 dry basis
+batch_6,mdf,"adhesive, UMF",0.11,Non-biogenic,,,
+batch_6,mdf,paraffin wax emulsion,0.01,Non-biogenic,,,
+batch_6,clay_brick_masonry,"fired clay brick (clay/loam 96 %, mineral additives 4 %)",0.8,Non-biogenic,,,
+batch_6,clay_brick_masonry,masonry mortar,0.2,Non-biogenic,,,
+batch_6,structural_steel,"steel, electric arc furnace, 100 % scrap",1.0,Non-biogenic,,,
+batch_6,pvc_coated_polyester,polyester yarn,0.2,Non-biogenic,,,
+batch_6,pvc_coated_polyester,PVC resin,0.45,Non-biogenic,,,
+batch_6,pvc_coated_polyester,plasticiser,0.25,Non-biogenic,,,
+batch_6,pvc_coated_polyester,"flame retardant, fillers, stabilisers",0.08,Non-biogenic,,,
+batch_6,pvc_coated_polyester,acrylic / PVDF lacquer,0.02,Non-biogenic,,,

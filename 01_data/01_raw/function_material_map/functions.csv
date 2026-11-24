@@ -1,0 +1,67 @@
+﻿function_id,name,element_type,ashby_archetype,functional_unit,service_life_yr,reference_product,req_id,kind,label,property,exponent,m_ref_kg,rho_ref_kg_m3,p_ref,op,threshold,basis,source,old_function_id
+F01,Structural beam,Structural elements,beam,"1 beam, 6 m simply supported span, floor load",50,Glulam GL24h beam,stiff,sizing,Deflection limit (stiffness),,,79.0,439.0,11.5,,,Ashby,glulam GL24h 100×300 at 6 m (RAW sheet glulam beam),F01
+F01,Structural beam,Structural elements,beam,"1 beam, 6 m simply supported span, floor load",50,Glulam GL24h beam,strength,sizing,Bending strength,,,79.0,439.0,24.0,,,Ashby,glulam GL24h,F01
+F01,Structural beam,Structural elements,beam,"1 beam, 6 m simply supported span, floor load",50,Glulam GL24h beam,rigid,screen,Rigid member,flexible,,,,,==,0.0,,,F01
+F01,Structural beam,Structural elements,beam,"1 beam, 6 m simply supported span, floor load",50,Glulam GL24h beam,length,screen,Element length ≥ span,max_length,,,,,>=,6.0,,,F01
+F02,Floor joists,Structural elements,beam_depth,"1 m² of floor, joists spanning 4.2 m",50,C24 sawn joists 45×220 @ 400 mm,stiff,sizing,Deflection limit (stiffness),,,10.4,420.0,11.0,,,derived,C24 45×220 @ 400 mm,F02
+F02,Floor joists,Structural elements,beam_depth,"1 m² of floor, joists spanning 4.2 m",50,C24 sawn joists 45×220 @ 400 mm,strength,sizing,Bending strength,,,10.4,420.0,24.0,,,derived,C24,F02
+F02,Floor joists,Structural elements,beam_depth,"1 m² of floor, joists spanning 4.2 m",50,C24 sawn joists 45×220 @ 400 mm,rigid,screen,Rigid member,flexible,,,,,==,0.0,,,F02
+F02,Floor joists,Structural elements,beam_depth,"1 m² of floor, joists spanning 4.2 m",50,C24 sawn joists 45×220 @ 400 mm,length,screen,Element length ≥ span,max_length,,,,,>=,4.2,,,F02
+F03,Column,Structural elements,column,"1 column, 3 m high, 200 kN axial",50,Glulam GL24h column 140×140,buckling,sizing,Buckling (stiffness),,,25.8,439.0,11.5,,,Ashby,glulam GL24h 140×140,F03
+F03,Column,Structural elements,column,"1 column, 3 m high, 200 kN axial",50,Glulam GL24h column 140×140,crushing,sizing,Crushing (compressive strength),,,25.8,439.0,24.0,,,Ashby,glulam GL24h fc0k,F03
+F03,Column,Structural elements,column,"1 column, 3 m high, 200 kN axial",50,Glulam GL24h column 140×140,rigid,screen,Rigid member,flexible,,,,,==,0.0,,,F03
+F03,Column,Structural elements,column,"1 column, 3 m high, 200 kN axial",50,Glulam GL24h column 140×140,compression,screen,Carries compression,sigma_c,,,,,>,0.0,,,F03
+F03,Column,Structural elements,column,"1 column, 3 m high, 200 kN axial",50,Glulam GL24h column 140×140,length,screen,Element length ≥ height,max_length,,,,,>=,3.0,,,F03
+F04,Floor or roof deck panel,Structural elements,panel,1 m² of deck spanning 0.6 m,50,Plywood 18 mm,stiff,sizing,Deflection limit (stiffness),,,10.8,600.0,8.0,,,Ashby,plywood 18 mm,F06
+F04,Floor or roof deck panel,Structural elements,panel,1 m² of deck spanning 0.6 m,50,Plywood 18 mm,strength,sizing,Bending strength,,,10.8,600.0,30.0,,,Ashby,plywood 18 mm,F06
+F04,Floor or roof deck panel,Structural elements,panel,1 m² of deck spanning 0.6 m,50,Plywood 18 mm,rigid,screen,Rigid panel,flexible,,,,,==,0.0,,,F06
+F05,Stair tread,Structural elements,beam_depth,"1 tread, 1.0 m span, 0.3 m deep",50,Oak tread 40 mm,stiff,sizing,Deflection (stiffness),,,8.4,700.0,12.0,,,derived,oak tread 40 mm,F22
+F05,Stair tread,Structural elements,beam_depth,"1 tread, 1.0 m span, 0.3 m deep",50,Oak tread 40 mm,strength,sizing,Bending strength,,,8.4,700.0,40.0,,,derived,oak tread 40 mm,F22
+F05,Stair tread,Structural elements,beam_depth,"1 tread, 1.0 m span, 0.3 m deep",50,Oak tread 40 mm,rigid,screen,Rigid tread,flexible,,,,,==,0.0,,,F22
+F05,Stair tread,Structural elements,beam_depth,"1 tread, 1.0 m span, 0.3 m deep",50,Oak tread 40 mm,length,screen,Element length ≥ 1 m,max_length,,,,,>=,1.0,,,F22
+F06,Interior partition wall,Walls,wall,"1 m² of non-load-bearing wall, 2.7 m high, Rw ≥ 40 dB",50,Clay brick 115 mm (for scale only),slender,sizing,Slenderness (t ≥ h/27),,,100.0,1000.0,,,,project assumption,t = 0.1 m → mass = ρ × 0.1 m,F07
+F06,Interior partition wall,Walls,wall,"1 m² of non-load-bearing wall, 2.7 m high, Rw ≥ 40 dB",50,Clay brick 115 mm (for scale only),acoustic,sizing_fixed,Sound insulation Rw ≥ 40 dB (mass law),,,100.0,,,,,project assumption,single-leaf mass law: ~100 kg/m²,F07
+F06,Interior partition wall,Walls,wall,"1 m² of non-load-bearing wall, 2.7 m high, Rw ≥ 40 dB",50,Clay brick 115 mm (for scale only),rigid,screen,Rigid wall,flexible,,,,,==,0.0,,,F07
+F06,Interior partition wall,Walls,wall,"1 m² of non-load-bearing wall, 2.7 m high, Rw ≥ 40 dB",50,Clay brick 115 mm (for scale only),compression,screen,Self-supporting,sigma_c,,,,,>,0.0,,,F07
+F06,Interior partition wall,Walls,wall,"1 m² of non-load-bearing wall, 2.7 m high, Rw ≥ 40 dB",50,Clay brick 115 mm (for scale only),length,screen,Element height ≥ 2.7 m (or stackable),max_length,,,,,>=,2.7,,,F07
+F07,Load-bearing wall,Walls,wall,"1 m² of wall, 2.7 m high, 100 kN/m",50,Clay brick 175 mm,crushing,sizing,Compressive strength,,,315.0,1800.0,6.0,,,Ashby,clay brick masonry 175 mm (fk ≈ 6 MPa),F08
+F07,Load-bearing wall,Walls,wall,"1 m² of wall, 2.7 m high, 100 kN/m",50,Clay brick 175 mm,slender,sizing,Slenderness (t ≥ h/18),,,150.0,1000.0,,,,project assumption,t = 0.15 m,F08
+F07,Load-bearing wall,Walls,wall,"1 m² of wall, 2.7 m high, 100 kN/m",50,Clay brick 175 mm,rigid,screen,Rigid wall,flexible,,,,,==,0.0,,,F08
+F07,Load-bearing wall,Walls,wall,"1 m² of wall, 2.7 m high, 100 kN/m",50,Clay brick 175 mm,compression,screen,Carries compression,sigma_c,,,,,>,0.0,,,F08
+F08,Exterior rainscreen cladding,Facade,panel,1 m² of ventilated cladding on battens at 0.6 m,40,Softwood boards 20 mm,stiff,sizing,Deflection between battens,,,9.0,450.0,11.0,,,Ashby,softwood boards 20 mm,F10
+F08,Exterior rainscreen cladding,Facade,panel,1 m² of ventilated cladding on battens at 0.6 m,40,Softwood boards 20 mm,strength,sizing,Bending strength,,,9.0,450.0,24.0,,,Ashby,softwood boards 20 mm,F10
+F08,Exterior rainscreen cladding,Facade,panel,1 m² of ventilated cladding on battens at 0.6 m,40,Softwood boards 20 mm,rigid,screen,Rigid panel,flexible,,,,,==,0.0,,,F10
+F08,Exterior rainscreen cladding,Facade,panel,1 m² of ventilated cladding on battens at 0.6 m,40,Softwood boards 20 mm,outdoor,screen,Durable outdoors,outdoor_durable,,,,,==,1.0,,,F10
+F09,Facade louvres,Facade,beam_depth,"1 m² of fixed louvres, blades spanning 1.5 m",30,Aluminium louvres,stiff,sizing,Blade deflection (stiffness),,,4.0,2700.0,70.0,,,derived,aluminium louvres,F18
+F09,Facade louvres,Facade,beam_depth,"1 m² of fixed louvres, blades spanning 1.5 m",30,Aluminium louvres,rigid,screen,Rigid blades,flexible,,,,,==,0.0,,,F18
+F09,Facade louvres,Facade,beam_depth,"1 m² of fixed louvres, blades spanning 1.5 m",30,Aluminium louvres,outdoor,screen,Durable outdoors,outdoor_durable,,,,,==,1.0,,,F18
+F09,Facade louvres,Facade,beam_depth,"1 m² of fixed louvres, blades spanning 1.5 m",30,Aluminium louvres,length,screen,Element length ≥ 1.5 m,max_length,,,,,>=,1.5,,,F18
+F10,Window frame member,Facade,beam,1 m of window frame profile,40,Softwood frame 68 × 78 mm,stiff,sizing,Frame stiffness,,,2.4,450.0,11.0,,,Ashby,softwood frame 68 × 78 mm,F24
+F10,Window frame member,Facade,beam,1 m of window frame profile,40,Softwood frame 68 × 78 mm,rigid,screen,Rigid profile,flexible,,,,,==,0.0,,,F24
+F10,Window frame member,Facade,beam,1 m of window frame profile,40,Softwood frame 68 × 78 mm,outdoor,screen,Durable outdoors,outdoor_durable,,,,,==,1.0,,,F24
+F11,Facade screen mesh,Facade,membrane,"1 m² of tensioned facade mesh, ≥ 5 kN/m",30,Polyester mesh (idealised),strength,sizing,Tensile strength ≥ 5 kN/m,,,0.03,600.0,100.0,,,derived,idealised polyester mesh,F25
+F11,Facade screen mesh,Facade,membrane,"1 m² of tensioned facade mesh, ≥ 5 kN/m",30,Polyester mesh (idealised),flexible,screen,Flexible mesh,flexible,,,,,==,1.0,,,F25
+F11,Facade screen mesh,Facade,membrane,"1 m² of tensioned facade mesh, ≥ 5 kN/m",30,Polyester mesh (idealised),outdoor,screen,Durable outdoors,outdoor_durable,,,,,==,1.0,,,F25
+F12,Interior wall lining board,Interior finishes and joinery,panel,1 m² of lining on studs at 0.6 m,40,Gypsum board 12.5 mm,stiff,sizing,Deflection between studs,,,8.5,680.0,2.5,,,Ashby,gypsum board 12.5 mm,F09
+F12,Interior wall lining board,Interior finishes and joinery,panel,1 m² of lining on studs at 0.6 m,40,Gypsum board 12.5 mm,strength,sizing,Bending strength,,,8.5,680.0,4.0,,,Ashby,gypsum board 12.5 mm,F09
+F12,Interior wall lining board,Interior finishes and joinery,panel,1 m² of lining on studs at 0.6 m,40,Gypsum board 12.5 mm,rigid,screen,Rigid panel,flexible,,,,,==,0.0,,,F09
+F13,Ceiling panel,Interior finishes and joinery,panel,1 m² of suspended ceiling panel spanning 0.6 m,25,Gypsum ceiling board 12.5 mm,stiff,sizing,Self-weight deflection,,,8.5,680.0,2.5,,,Ashby,gypsum ceiling board 12.5 mm,F11
+F13,Ceiling panel,Interior finishes and joinery,panel,1 m² of suspended ceiling panel spanning 0.6 m,25,Gypsum ceiling board 12.5 mm,rigid,screen,Rigid panel,flexible,,,,,==,0.0,,,F11
+F14,Acoustic absorber panel,Interior finishes and joinery,absorber,"1 m² of wall absorber, αw ≥ 0.7",25,PET felt 40 mm,absorption,sizing,Sound absorption αw ≥ 0.7,,,2.4,60.0,0.8,,,project assumption,PET felt 40 mm αw ≈ 0.8,F12
+F14,Acoustic absorber panel,Interior finishes and joinery,absorber,"1 m² of wall absorber, αw ≥ 0.7",25,PET felt 40 mm,rigid,screen,Self-supporting panel,flexible,,,,,==,0.0,,,F12
+F15,Skirting board,Interior finishes and joinery,fixed,"1 m of skirting, 15 × 70 mm profile",25,Softwood skirting,fixed,sizing,Fixed profile 15 × 70 mm,,,0.44,420.0,,,,project assumption,softwood skirting,F14
+F15,Skirting board,Interior finishes and joinery,fixed,"1 m of skirting, 15 × 70 mm profile",25,Softwood skirting,rigid,screen,Rigid profile,flexible,,,,,==,0.0,,,F14
+F16,Floor finish,Interior finishes and joinery,fixed,1 m² of floor finish,25,Hardwood parquet 15 mm,fixed,sizing,Fixed finish thickness 15 mm,,,10.5,700.0,,,,project assumption,hardwood parquet 15 mm,F15
+F16,Floor finish,Interior finishes and joinery,fixed,1 m² of floor finish,25,Hardwood parquet 15 mm,wear,screen,Compressive strength ≥ 5 MPa (wear),sigma_c,,,,,>=,5.0,,,F15
+F16,Floor finish,Interior finishes and joinery,fixed,1 m² of floor finish,25,Hardwood parquet 15 mm,rigid,screen,Rigid finish,flexible,,,,,==,0.0,,,F15
+F17,Interior door leaf,Interior finishes and joinery,panel,1 door leaf 2.1 × 0.9 m,30,Flush door (particleboard core),stiff,sizing,Leaf stiffness,,,30.0,650.0,3.0,,,Ashby,flush door with particleboard core 40 mm,F21
+F17,Interior door leaf,Interior finishes and joinery,panel,1 door leaf 2.1 × 0.9 m,30,Flush door (particleboard core),rigid,screen,Rigid leaf,flexible,,,,,==,0.0,,,F21
+F17,Interior door leaf,Interior finishes and joinery,panel,1 door leaf 2.1 × 0.9 m,30,Flush door (particleboard core),length,screen,Element length ≥ 2.1 m,max_length,,,,,>=,2.1,,,F21
+F18,Balustrade infill panel,Interior finishes and joinery,panel,1 m² of infill panel,40,Plywood 15 mm,stiff,sizing,Panel stiffness,,,9.0,600.0,8.0,,,Ashby,plywood 15 mm,F23
+F18,Balustrade infill panel,Interior finishes and joinery,panel,1 m² of infill panel,40,Plywood 15 mm,strength,sizing,Impact / bending strength,,,9.0,600.0,30.0,,,Ashby,plywood 15 mm,F23
+F18,Balustrade infill panel,Interior finishes and joinery,panel,1 m² of infill panel,40,Plywood 15 mm,rigid,screen,Rigid panel,flexible,,,,,==,0.0,,,F23
+F19,Interior tensioned membrane,Membranes,membrane,"1 m² of interior membrane, ≥ 10 kN/m",20,Polyester fabric (idealised),strength,sizing,Tensile strength ≥ 10 kN/m,,,0.06,600.0,100.0,,,derived,idealised polyester fabric sized exactly for 10 kN/m,F16
+F19,Interior tensioned membrane,Membranes,membrane,"1 m² of interior membrane, ≥ 10 kN/m",20,Polyester fabric (idealised),flexible,screen,Flexible membrane,flexible,,,,,==,1.0,,,F16
+F20,Outdoor shade sail,Membranes,membrane,"1 m² of shade sail, ≥ 10 kN/m",15,Polyester fabric (idealised),strength,sizing,Tensile strength ≥ 10 kN/m,,,0.06,600.0,100.0,,,derived,idealised polyester fabric,F17
+F20,Outdoor shade sail,Membranes,membrane,"1 m² of shade sail, ≥ 10 kN/m",15,Polyester fabric (idealised),flexible,screen,Flexible membrane,flexible,,,,,==,1.0,,,F17
+F20,Outdoor shade sail,Membranes,membrane,"1 m² of shade sail, ≥ 10 kN/m",15,Polyester fabric (idealised),outdoor,screen,Durable outdoors,outdoor_durable,,,,,==,1.0,,,F17

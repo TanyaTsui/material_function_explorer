@@ -1,0 +1,85 @@
+run_id,material_id,question_id,answer,value,unit,evidence,source_link,search_step,date
+run_B,osb3,D1,yes,market for oriented strand board,,"ecoinvent OSB (EPF average, uncoated, at factory gate) has wood strands (4.35 % water, matching the input 4.5 %), MDI adhesive (3.0 %) plus organic chemicals (0.9 %) and paraffin (1.8 %): all three input constituents are present; adhesive share 3.9 % vs 5.1 % in the input (differs in amount, not in kind). Judgement call, see protocol_issues.md.",,oriented strand board,2026-11-19
+run_B,osb3,D2,yes,market for oriented strand board,,"market dataset exists (includes lorry + train transport) so A2 is covered, no extra A2 row.",,market for oriented strand board,2026-11-19
+run_B,osb3,D3,RER,RER,,RER market exists (D3 rule 1/2).,,"locations: RER, RoW",2026-11-19
+run_B,osb3,D4,single variant,,,only one OSB market per location; no variant to choose.,,,2026-11-19
+run_B,osb3,CHECK 1,yes,0.892,× median,our GWP-fossil A1–A3 0.4072 kg CO2e/kg vs median 0.4567 of 4 EN 15804+A2 OSB EPDs; within 0.5–1.5×.,https://www.oekobaudat.de/OEKOBAU.DAT/datasetdetail/process.xhtml?lang=en&uuid=aab0ed28-e5b0-43d6-a932-4cdc4770c518,,2026-11-19
+run_B,osb3,A4 · T1,no,,,"OSB is delivered as boards, not loose.",,,2026-11-19
+run_B,osb3,A4 · T2,no,,,"Manufacturer found in DE (EGGER Wismar; Swiss Krono Heiligengrabe) and FR (Swiss Krono Sully-sur-Loire); none found in ES (Kronospan Tortosa makes particleboard, OSB line only planned), IT or NL → fewer than 3 of 5.",https://www.wbpionline.com/news/kronospan-opens-wood-panel-factory-in-tortosa-spain-11050454/,web search 'OSB plant locations Europe',2026-11-19
+run_B,osb3,A4 · T3,yes,EU manufactured,,"OSB made in Europe: EGGER Wismar (DE), Swiss Krono Heiligengrabe (DE), West Fraser Genk (BE), Inverness (UK).",https://uk.westfraser.com/european-operations/our-mills,,2026-11-19
+run_B,osb3,A5 · I1,no,34,kg per piece,"OSB 3 board 2500×1250×18 mm weighs about 34 kg (retail listings; 0.05625 m³ × 600 kg/m³); under 50 kg, installed by hand. Board is not poured or pumped.",https://sitypro.com/en/construction-materials/lumber-and-wood-based-panels/osb-boards/osb-paneel-18mm-2500x1250,web search EGGER OSB 3 format weight,2026-11-19
+run_B,osb3,A5 · L1,no,3,% waste,Prefab board fixed dry (nailed/screwed) → NMD 3 % waste; loss = 0.03 ÷ 0.97 = 0.0309 kg per kg installed.,https://milieudatabase.nl/media/filer_public/08/97/08978af7-15a0-4412-a782-28aee7a91b83/bepalingsmethode-milieuprestatie-bouwwerken-juli-2020.pdf,,2026-11-19
+run_B,osb3,C1 · X1,no,,,"Boards are nailed/screwed (not cast, not bonded with mortar or adhesive) and ~34 kg per piece → taken apart by hand, no diesel row.",,,2026-11-19
+run_B,osb3,C2 · ROUTE,55,5 / 85 / 10 / 0,% landfill / incineration / recycling / reuse,"NMD category 55 board material, clean (workbook sheet nmd_eol).",https://milieudatabase.nl/en/downloads/download/appendix-default-values-for-end-of-life-processing-scenarios/,,2026-11-19
+run_B,osb3,D · CFF · F1,Wood panels,,,OSB/3 is listed under archetype 'Wood panels' in sheet cff_archetypes.,,,2026-11-19
+run_B,osb3,"D · BIO-C · B1: wood strands, incl. moisture",Wood,0.47,carbon fraction,listed in sheet carbon_archetypes (Wood).,,,2026-11-19
+run_B,osb3,"D · BIO-C · B1: adhesive, PMDI/MUF",Non-biogenic,0,carbon fraction,listed in sheet carbon_archetypes (Non-biogenic).,,,2026-11-19
+run_B,osb3,D · BIO-C · B1: paraffin wax,Non-biogenic,0,carbon fraction,listed in sheet carbon_archetypes (Non-biogenic).,,,2026-11-19
+run_B,osb3,W1: OSB/3 × landfill,no,,,"ecoinvent has no waste-OSB / waste-particleboard treatment dataset; 'waste wood, untreated' is for untreated wood (OSB is ~7 % resin/wax) → W2 fallback, class 'Wood, wood-based' (OSB/3 is listed under that class). Single-dataset product is the waste material (C2 BLOCK rule).",,searches: treatment of waste wood; waste wood; waste oriented; waste particleboard,2026-11-19
+run_B,osb3,W1: OSB/3 × incineration,no,,,"ecoinvent has no waste-OSB / waste-particleboard treatment dataset; 'waste wood, untreated' is for untreated wood (OSB is ~7 % resin/wax) → W2 fallback, class 'Wood, wood-based' (OSB/3 is listed under that class). Single-dataset product is the waste material (C2 BLOCK rule).",,searches: treatment of waste wood; waste wood; waste oriented; waste particleboard,2026-11-19
+run_B,osb3,W1: OSB/3 × recycling,no,,,"ecoinvent has no waste-OSB / waste-particleboard treatment dataset; 'waste wood, untreated' is for untreated wood (OSB is ~7 % resin/wax) → W2 fallback, class 'Wood, wood-based' (OSB/3 is listed under that class). Single-dataset product is the waste material (C2 BLOCK rule).",,searches: treatment of waste wood; waste wood; waste oriented; waste particleboard,2026-11-19
+run_B,osb3,D2-D4 note,n/a,,,"no machine, P1/P2 and CHECK steps not run: exact match kept (CHECK 1 passed).",,,2026-11-19
+run_B,cork,D1,no,,,"ecoinvent 'cork slab' (RER) contains resin binders (melamine-, phenol-, urea-formaldehyde resin) that the pure expanded cork input does not list.",,cork; cork slab,2026-11-19
+run_B,cork,D1b,no,cork slab production RER,0.140 kg per kg,"same product and main constituent (raw cork 1.06 kg), but differing constituents: melamine formaldehyde resin 0.056 + phenolic resin 0.028 + urea formaldehyde resin 0.056 = 0.140 kg per kg = 14.0 % of the input mass (11.7 % of the dataset's own 1.20 kg input) > 10 % threshold.",,cork slab,2026-11-19
+run_B,cork,D5: raw cork granules,yes,"market for cork, raw",,"'cork, raw' is the state in which cork enters the factory (ecoinvent cork slab uses it).",,cork; waste cork,2026-11-19
+run_B,cork,D2: raw cork granules,yes,"market for cork, raw",,market dataset exists.,,,2026-11-19
+run_B,cork,D3: raw cork granules,RoW,RoW,,"markets exist for PT and RoW; PT is not in the D3 country list (DE, FR, IT, ES, NL, AT, SE, FI, PL, CH) so it counts as 'any other' (tier 7) after RoW (tier 6).",,,2026-11-19
+run_B,cork,D4: raw cork granules,single variant,,,one variant.,,,2026-11-19
+run_B,cork,P1: grinding,hammer mill (median of 3),0.01125,kWh/kg,"3 mills from 3 manufacturers (Bruks, Zorg, Rongda): 0.0308 / 0.01125 / 0.00528 kWh/kg → median = Zorg 8 t/h, 90 kW.",https://bruks-siwertell.com/milling/hammer-mill-green-materials ; https://zorg-biogas.com/equipment/grinders/hammer-mill-for-straw-2 ; https://rongdapelletmill.com/Biomass_Pellet_Mill/Industrial_Wood_Chip_Hammer.html,web search hammer mill datasheet,2026-11-19
+run_B,cork,P2: grinding,3.0e-6 kg/kg,3.18e-6,kg machine per kg product,"M 3,000 kg, life 125,000 h, throughput 8,000 kg/h; × 1.06.",https://zorg-biogas.com/equipment/grinders/hammer-mill-for-straw-2,,2026-11-19
+run_B,cork,P1: autoclave expansion (superheated steam),proxy,1.29,MJ heat per kg,no complete datasheet found; proxy from a pilot waste autoclave (TeR 4). Probably an underestimate for superheated steam at 300–350 °C.,https://cora.ucc.ie/bitstreams/fb51b22e-b8a8-4d79-8910-81b409897393/download,web searches on cork autoclave energy,2026-11-19
+run_B,cork,P2: autoclave expansion (superheated steam),unclear,,,no machine with mass and throughput found for the proxy autoclave; no machine row written (lower-impact branch).,,,2026-11-19
+run_B,cork,P1: cooling and stabilising,no energy,,,input note starts with 'no energy'; no rows.,,,2026-11-19
+run_B,cork,P1: cutting blocks into boards,unclear,,,found a foam band saw with 5.5 kW (KMSYSTEM GB Pro-2024) but no weight or throughput; no three complete datasheets; no rows written (lower-impact branch).,https://pdf.directindustry.com/pdf/kmsystem/bandsaw-range/210479-1120503.html,web search band saw foam block cutting,2026-11-19
+run_B,cork,P2: cutting blocks into boards,unclear,,,"no P1 machine, so no machine row.",,,2026-11-19
+run_B,cork,CHECK,yes,1.06,kg,material rows: raw cork granules 1.06 kg = input 1.06 kg per kg.,,,2026-11-19
+run_B,cork,CHECK 3,no,0.207,× median,"built LCI 0.1063 kg CO2e/kg vs EPD 0.5123 (Expanded cork, 80 kg/m³, only 1 EPD): below 0.5×.",https://www.oekobaudat.de/OEKOBAU.DAT/datasetdetail/process.xhtml?lang=en&uuid=fdbe82c6-7073-4f8c-a540-c37a6bf16cd6,,2026-11-19
+run_B,cork,REVIEW,"keep built LCI, flagged",0.793,distance,"only one route produced an LCI (D1 and D1b answered no before any LCI was written), so the built LCI is kept and flagged.",,,2026-11-19
+run_B,cork,A4 · T1,no,,,boards.,,,2026-11-19
+run_B,cork,A4 · T2,no,,,"expanded cork board makers found: Amorim Cork Insulation (PT; sold as Corkpan in IT, Corkisol in FR, Corktherm in DE/AT/CH) and Barnacork/Aglocork (ES); Pro Suber (Tilburg, NL) listed but manufacturing not shown; none made in DE/FR/IT → fewer than 3 of 5.",https://archello.com/nl/brand/amorim-cork-insulation,web search expanded cork manufacturers,2026-11-19
+run_B,cork,A4 · T3,yes,EU manufactured,,"Amorim Cork Insulation, Portugal; Barnacork, Spain.",https://archello.com/nl/brand/amorim-cork-insulation,,2026-11-19
+run_B,cork,A5 · I1,no,5.5,kg per piece (100 mm),"standard board 1000×500 mm, 110 kg/m³ → 55 kg per m of thickness; ≤16.5 kg even at 300 mm; boards are not poured or pumped.",https://amorimcorksolutions.com/media/10945/tds_expanded-insulation-corkboard_en.pdf,,2026-11-19
+run_B,cork,A5 · L1,no,3,% waste,"boards fixed dry/mechanically, prefab → NMD 3 %.",https://milieudatabase.nl/media/filer_public/08/97/08978af7-15a0-4412-a782-28aee7a91b83/bepalingsmethode-milieuprestatie-bouwwerken-juli-2020.pdf,,2026-11-19
+run_B,cork,C1 · X1,no,,,"boards under 50 kg, not cast; fixing method (adhesive vs mechanical) depends on use. Unclear → lower-impact branch: no diesel row.",,,2026-11-19
+run_B,cork,C2 · ROUTE,52,5 / 95 / 0 / 0,% landfill / incineration / recycling / reuse,"NMD category 52 organic / bio-based, other.",https://milieudatabase.nl/en/downloads/download/appendix-default-values-for-end-of-life-processing-scenarios/,,2026-11-19
+run_B,cork,D · CFF · F1,Other plant-based,,,cork listed in sheet cff_archetypes.,,,2026-11-19
+run_B,cork,D · BIO-C · B1: raw cork granules,Cork,0.55,carbon fraction,sheet carbon_archetypes.,,,2026-11-19
+run_B,cork,W1: raw cork granules × landfill,no,,,no 'waste cork' treatment dataset in ecoinvent → W2: class 'Other plant-based' = as wood.,,name:waste cork; prod:waste cork,2026-11-19
+run_B,cork,W1: raw cork granules × incineration,no,,,no 'waste cork' treatment dataset in ecoinvent → W2: class 'Other plant-based' = as wood.,,name:waste cork; prod:waste cork,2026-11-19
+run_B,hempcrete,D5: hemp shiv,yes,market for hemp hurd,,hemp hurd = shiv; single French market,,see dataset_choices,2026-11-19
+run_B,hempcrete,D3: hemp shiv,FR,FR,,first location available in the D3 order.,,,2026-11-19
+run_B,hempcrete,D5: air lime,yes,"market for hydrated lime, loose",,air lime = hydrated lime; loose (bulk silo) variant; CH is a listed single country (D3 4) ahead of RoW,,see dataset_choices,2026-11-19
+run_B,hempcrete,D3: air lime,CH,CH,,first location available in the D3 order.,,,2026-11-19
+run_B,hempcrete,D5: natural hydraulic lime,yes,market for hydraulic lime,,'hydraulic lime' market RER,,see dataset_choices,2026-11-19
+run_B,hempcrete,D3: natural hydraulic lime,RER,RER,,first location available in the D3 order.,,,2026-11-19
+run_B,hempcrete,D5: water,yes,market group for tap water,,market group RER,,see dataset_choices,2026-11-19
+run_B,hempcrete,D3: water,RER,RER,,first location available in the D3 order.,,,2026-11-19
+run_B,hempcrete,D1,no,,,"no hempcrete / hemp block dataset in ecoinvent 3.12 (only hemp hurd, fibre and lime mortar).",,hemp; hempcrete; lime,2026-11-19
+run_B,hempcrete,D1b,no,,,"no candidate product in the delivered state exists, so the test cannot be met.",,hemp; hempcrete; lime mortar,2026-11-19
+run_B,hempcrete,P1: mixing,unclear,,,"found twin-shaft mixers (Liebherr DW 2.5: 75 kW, 3,750 L, 7,300 kg; DW 3.0: 2×55 kW, 4,500 L, 8,500 kg; Co-Nele CTS 30–2×110 kW) but no datasheet gives kg/h or cycle time with the mix density; no rows (lower-impact branch).",https://www.liebherr.com/en-gb/p/85975-4225754,web search paddle / twin shaft mixer datasheet,2026-11-19
+run_B,hempcrete,P2: mixing,unclear,,,no P1 machine → no machine row.,,,2026-11-19
+run_B,hempcrete,P1: moulding and pressing,unclear,,,"block presses found (63.45 kW, 11,200 kg, 1,620 hollow blocks/h; QT2-90 12 kW, 1 t, 480/h) give blocks per hour, not kg/h, and are for concrete blocks; no three complete datasheets; no rows (lower-impact branch).",https://www.aajjo.com/product/hydraulic-concrete-block-making-machine-11,web search hydraulic block press datasheet,2026-11-19
+run_B,hempcrete,P2: moulding and pressing,unclear,,,no P1 machine → no machine row.,,,2026-11-19
+run_B,hempcrete,P1: air drying and curing,no energy,,,"input note starts with 'no energy (no heat input, IsoHemp)'; no rows.",,,2026-11-19
+run_B,hempcrete,CHECK,yes,1.000,kg,0.342 + 0.108 + 0.422 + 0.128 = 1.000 kg = input.,,,2026-11-19
+run_B,hempcrete,CHECK 3,yes,1.4995,× median,"built LCI 0.6361 vs median 0.4242 of 2 hemp-stone EPDs: ratio 1.4995, just inside the 1.5× limit (borderline).",https://www.oekobaudat.de/OEKOBAU.DAT/datasetdetail/process.xhtml?lang=en&uuid=07f763b9-5942-4aad-8c07-92a1076df3e5,ÖKOBAUDAT API names Hanfstein / hemp,2026-11-19
+run_B,hempcrete,A4 · T1,no,,,blocks.,,,2026-11-19
+run_B,hempcrete,A4 · T2,no,,,"hemp blocks found: IsoHemp (Fernelmont, BE; German name 'Hanfstein'; French office only), Schönthaler Bausteinwerk (EPD in ÖKOBAUDAT, 'Hanfstein'); no manufacturer found in FR, IT, ES, NL → fewer than 3 of 5.",https://www.hempbuildmag.com/home/isohemp-factory,web search hemp block manufacturers,2026-11-19
+run_B,hempcrete,A4 · T3,yes,EU manufactured,,"IsoHemp, Fernelmont, Belgium.",https://www.hempbuildmag.com/home/isohemp-factory,,2026-11-19
+run_B,hempcrete,A5 · I1,no,≤16.5,kg per block,"IsoHemp blocks 600×300 mm, 7.5–36 cm thick, 5.3–16.5 kg (2026 brochure); not poured.",https://www.isohemp.com/sites/default/files/2026-01/IH_Brochure_Naturellement-Performant_UK_2026-1_0.pdf,web search IsoHemp block weight,2026-11-19
+run_B,hempcrete,A5 · L1,yes,5,% waste,blocks are laid in lime mortar on site → 'laid from small units with mortar' = in situ; loss = 0.05 ÷ 0.95 = 0.0526.,https://milieudatabase.nl/media/filer_public/08/97/08978af7-15a0-4412-a782-28aee7a91b83/bepalingsmethode-milieuprestatie-bouwwerken-juli-2020.pdf,,2026-11-19
+run_B,hempcrete,C1 · X1,yes,0.036,MJ/kg diesel,blocks are bonded with mortar → machine demolition.,,,2026-11-19
+run_B,hempcrete,C2 · ROUTE,8,1 / 0 / 99 / 0,% landfill / incineration / recycling / reuse,"NMD category 8 (closest category, assumption in workbook).",https://milieudatabase.nl/en/downloads/download/appendix-default-values-for-end-of-life-processing-scenarios/,,2026-11-19
+run_B,hempcrete,D · CFF · F1,"Mineral, crushed to aggregate",,,hempcrete listed in sheet cff_archetypes.,,,2026-11-19
+run_B,hempcrete,D · BIO-C · B1: hemp shiv,Cellulose fibres and stalks,0.44,carbon fraction,sheet carbon_archetypes.,,,2026-11-19
+run_B,hempcrete,D · BIO-C · B1: air lime,Non-biogenic,0,carbon fraction,sheet carbon_archetypes.,,,2026-11-19
+run_B,hempcrete,D · BIO-C · B1: natural hydraulic lime,Non-biogenic,0,carbon fraction,sheet carbon_archetypes.,,,2026-11-19
+run_B,hempcrete,D · BIO-C · B1: water,Non-biogenic,0,carbon fraction,sheet carbon_archetypes.,,,2026-11-19
+run_B,hempcrete,W1: hemp shiv × landfill,no,,,no ecoinvent waste dataset for 'hemp shiv' → W2 class 'Other plant-based' = as wood,,name:waste lime; prod:waste mortar; prod:waste mineral,2026-11-19
+run_B,hempcrete,W1: hemp shiv × recycling,no,,,no ecoinvent waste dataset for 'hemp shiv' → W2 class 'Other plant-based' = as wood,,name:waste lime; prod:waste mortar; prod:waste mineral,2026-11-19
+run_B,hempcrete,W1: air lime × landfill,no,,,no ecoinvent waste dataset for 'air lime' → W2 class 'Mineral',,name:waste lime; prod:waste mortar; prod:waste mineral,2026-11-19
+run_B,hempcrete,W1: air lime × recycling,no,,,no ecoinvent waste dataset for 'air lime' → W2 class 'Mineral',,name:waste lime; prod:waste mortar; prod:waste mineral,2026-11-19
+run_B,hempcrete,W1: natural hydraulic lime × landfill,no,,,no ecoinvent waste dataset for 'natural hydraulic lime' → W2 class 'Mineral',,name:waste lime; prod:waste mortar; prod:waste mineral,2026-11-19
+run_B,hempcrete,W1: natural hydraulic lime × recycling,no,,,no ecoinvent waste dataset for 'natural hydraulic lime' → W2 class 'Mineral',,name:waste lime; prod:waste mortar; prod:waste mineral,2026-11-19
+run_B,hempcrete,W1: water × landfill,no,,,no ecoinvent waste dataset for 'water' → W2 class 'Mineral',,name:waste lime; prod:waste mortar; prod:waste mineral,2026-11-19
+run_B,hempcrete,W1: water × recycling,no,,,no ecoinvent waste dataset for 'water' → W2 class 'Mineral',,name:waste lime; prod:waste mortar; prod:waste mineral,2026-11-19
