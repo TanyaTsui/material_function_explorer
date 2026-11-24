@@ -76,9 +76,16 @@ energy credit   = −(1 − B) × R_incineration × LHV × (X_heat × E_heat + X
 module D        = material credit + energy credit
 ```
 
+A case whose parts belong to different archetypes has one row per part, each with its mass share, and module D is
+`Σ mass share × (material credit + energy credit)` over its parts. Only reinforced concrete has two parts so far:
+concrete (95.5 %, mineral archetype) and reinforcing steel (4.5 %, steel archetype), both with the shares of its C3–C4
+block (99 % to reinforced concrete recycling, where the rebar is recovered, 1 % landfill).
+
 | Symbol | Meaning | Source |
 |---|---|---|
 | A | allocation of burdens and credits between supplier and user of recycled material | archetype (JRC Annex C defaults where available) |
+| R1 | recycled content: share of the material entering production that is already recycled (not used in module D; see below) | archetype |
+| mass share | share of the case's mass that belongs to this archetype (1 unless the case has parts) | `cff_inputs.csv` |
 | R_recycling, R_reuse, R_incineration | end-of-life shares | `cff_inputs.csv` (NMD end-of-life defaults, as in C3–C4) |
 | Qsout/Qp | quality of the recycled output relative to the primary material it replaces | archetype |
 | B | allocation factor of energy recovery; 0 in the EF method | archetype |
@@ -143,5 +150,7 @@ Intermediate tables of each step are in `01_data/02_processed/unit_lcia_steps/`,
   and constituents were read from the RAW LCI sheets. Where no archetype fits (seagrass, pea protein, glycerol,
   xanthan gum) the closest or the conservative one was taken (lower stored carbon for RAW) and flagged.
 - **The two concrete baselines** (non-structural and reinforced structural) both use the `concrete` rows of the official
-  protocol run, which had one concrete. For reinforced concrete the steel share would change the CFF archetype mix.
+  protocol run, which had one (unreinforced) concrete. Reinforced concrete has an extra steel row in `cff_inputs.csv`
+  (4.5 % of the mass, from its A1–A3); its constituent list in `bioc_inputs.csv` lacks the steel, which holds no
+  biogenic carbon, so the stored CO2 (0) is unaffected.
 - **Locations of the avoided datasets** of module D.
